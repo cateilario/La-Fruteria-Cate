@@ -4,7 +4,7 @@
   "description": "**Project Manager**: Kike",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass scss/main.scss styles/main.css --watch"
   },
   "author": "",
   "license": "ISC",
