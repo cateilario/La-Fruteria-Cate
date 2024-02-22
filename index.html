@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frutería La Quinta Fila</title>
     <!-- <link rel="stylesheet" href="/styles/style.css"/> -->
+    <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,18 +25,20 @@
       </div>
     </div>
 
-    <!-- Page-->
     <header>
-      <nav>
-        <ul>
-          <li class="logo"><a href="/index.html"><img src="/assets/imgs/logo.png" alt="Logo" class="logo" /> </a></li>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="/templates/contact.html">Contacto</a></li>
-          <li><a href="/templates/aboutUs.html">Acerca de Nosotros</a></li>
-        </ul>
+        <div class="logo">
+          <a href="/index.html"><img src="/assets/imgs/logo.png" alt="Logo" class="logo" /></a>
+        </div>
+        <nav class="nav-bar"></nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/templates/contact.html">Contacto</a></li>
+            <li><a href="/templates/aboutUs.html">Acerca de Nosotros</a></li>
+          </ul>
+        </nav>
         <button class="button-green-nav" role="button">Register/Log-In</button>
-      </nav>
     </header>
+    
     <div class="wrapper">
       <section class="wrap1">
         <h3>Comida del Kikas</h3>

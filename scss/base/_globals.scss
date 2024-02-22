@@ -1,4 +1,13 @@
 @font-face {
     font-family: "Fresh Fruit";
-    src: url(/assets/fonts/fresh_fruit/Fresh\ Fruit.otf);
+    src: url(/assets/fonts/Fresh\ Fruit.ttf);
+}
+
+@font-face {
+    font-family: "Open";
+    src: url(/assets/fonts/OpenSans-Regular.ttf);
+}
+
+body{
+    font-family: Open;
 }

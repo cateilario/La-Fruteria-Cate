@@ -2,12 +2,6 @@
   font-family: "Fresh Fruit";
   src: url(/assets/fonts/fresh_fruit/Fresh\ Fruit.otf);
 }
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-}
 
 *,
 *::before,
@@ -21,8 +15,6 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
   background-color: white;
 }
 
