@@ -57,7 +57,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" width="7rem" height="7rem">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
         </svg>
-
         <div>
           <h2>Envío o Recogida</h2>
           <p>Llegamos a cualquier sitio del sistema solar</p>
@@ -66,19 +65,128 @@
     </div>
   </section>
 
+  <section class="wrap-2">
+    <h1>Productos</h1>
+    <div class="products-grid">
+      <article>
+        <img src="/la-fruteria-cate/assets/imgs/product" alt="">
+        <div class="card-body">
+          <h2>Fresas</h2>
+          <p>8,90 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="./assets/imgs/product2" alt="">
+        <div class="card-body">
+          <h2>Lechuga</h2>
+          <p>5,90 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="./assets/imgs/product3" alt="">
+        <div class="card-body">
+          <h2>Alcachofas</h2>
+          <p>10,90 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Piña</h2>
+          <p>3,90 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Manzana</h2>
+          <p>2,90 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Aguacate</h2>
+          <p>4,30 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Melón</h2>
+          <p>5,20 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Arándanos</h2>
+          <p>4,80 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <img src="" alt="">
+        <div class="card-body">
+          <h2>Naranjas</h2>
+          <p>3,50 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+      <article>
+        <div class="card-img">
+          <img src="./assets/imgs/product10.png" alt="">
+        </div>
+        <div class="card-body">
+          <h2>Plátanos</h2>
+          <p>2,80 <span>€/kg</span></p>
+        </div>
+        <div class="card-footer">
+          <button>Añadir</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!--Carrusel imágenes-->
-  <div class="carousel">
+  <section class="carousel">
     <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
     <div id="images" class="image-container"></div>
     <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
-  </div>
-  <div class="controls">
-    <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
-    <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
-  </div>
-  <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
 
-  <footer class="footer">
+    <div class="controls">
+      <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
+      <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
+    </div>
+    <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
+  </section>
+
+  <footer>
     <div class="f1"><img src="/assets/imgs/logo.png" alt="Logo" class="logo">
       <p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p>
     </div>

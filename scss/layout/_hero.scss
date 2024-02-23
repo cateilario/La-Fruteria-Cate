@@ -7,7 +7,7 @@
 .hero{
     clip-path: polygon(0 0, 100% 0, 100% 87%, 0 90%);
     background: url('/la-fruteria-cate/assets/imgs/hero.jpg') center/cover;
-    height: 100vh;
+    height: 90vh;
     min-height: 90vh;
 }
 
@@ -45,6 +45,7 @@
 
 .wrap-2{
     width: 100%;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +64,7 @@
         width: 80%;
 
         .container-info{
-            border: 1px solid v.$dark-grey;
+            border: 1px solid v.$light-grey;
             border-radius: 6px;
             padding: 1rem 2rem;
             display: flex;
@@ -75,8 +76,6 @@
                 background-color: v.$dark-green;
                 color: v.$white;
                 border-radius: 100px;
-                box-shadow: 0 3px 4px rgba(68, 125, 90, 0.686);
-                cursor: pointer;
                 padding: .5rem 2rem;
                 text-align: center;
                 border: 0;

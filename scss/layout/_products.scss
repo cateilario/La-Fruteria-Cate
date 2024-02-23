@@ -1,0 +1,51 @@
+@use './../base/variables' as v;
+
+.products-grid{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap: .5rem;
+}
+
+.products-grid article{
+    border: 1px solid rgb(164, 162, 162);
+    border-radius: 6px;
+}
+
+.card-img{
+    max-width: 100%;
+
+
+    img{
+    }
+}
+
+.card-body{
+    h2{
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+
+        span{
+            font-size: .9rem;
+        }
+    }
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    button{
+        border: 0;
+        border-radius: 4px;
+        padding: .5rem 1.5rem;
+        background-color: v.$dark-green;
+        color:v.$white;
+        cursor:pointer;
+    }
+}

@@ -73,7 +73,7 @@ a:link, a:visited, a:active {
 .hero {
   clip-path: polygon(0 0, 100% 0, 100% 87%, 0 90%);
   background: url("/la-fruteria-cate/assets/imgs/hero.jpg") center/cover;
-  height: 100vh;
+  height: 90vh;
   min-height: 90vh;
 }
 
@@ -109,6 +109,7 @@ a:link, a:visited, a:active {
 
 .wrap-2 {
   width: 100%;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +127,7 @@ a:link, a:visited, a:active {
   width: 80%;
 }
 .wrap-2 .container .container-info {
-  border: 1px solid #3b3a3a;
+  border: 1px solid #7c7979;
   border-radius: 6px;
   padding: 1rem 2rem;
   display: flex;
@@ -138,12 +139,50 @@ a:link, a:visited, a:active {
   background-color: #426b52;
   color: #f0f0f0;
   border-radius: 100px;
-  box-shadow: 0 3px 4px rgba(68, 125, 90, 0.686);
-  cursor: pointer;
   padding: 0.5rem 2rem;
   text-align: center;
   border: 0;
   font-weight: 200;
+}
+
+.products-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.products-grid article {
+  border: 1px solid rgb(164, 162, 162);
+  border-radius: 6px;
+}
+
+.card-img {
+  max-width: 100%;
+}
+.card-body h2 {
+  font-size: 1.2rem;
+}
+.card-body p {
+  font-size: 1.2rem;
+}
+.card-body p span {
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.card-footer button {
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  background-color: #426b52;
+  color: #f0f0f0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
