@@ -8,4 +8,4 @@
 
 **JavaScript**: Caterina
 
-**BackEnd**: Ignacio Carmona
+**BackEnd**: Ignacio Carmona Gonzalez
