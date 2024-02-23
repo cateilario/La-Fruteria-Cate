@@ -6,8 +6,9 @@
 
 .hero{
     clip-path: polygon(0 0, 100% 0, 100% 87%, 0 90%);
-    background: url(/assets/imgs/hero.jpg) center/cover;
-    height: 90vh;
+    background: url('/la-fruteria-cate/assets/imgs/hero.jpg') center/cover;
+    height: 100vh;
+    min-height: 90vh;
 }
 
 .wrap-1::before {
@@ -23,21 +24,64 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
     gap: 1rem;
     height: 90%;
     width: 50%;
     text-align: left;
     padding: 0 5rem;
     
-    h1{
-        font-size: 3rem;
-        color: v.$white;
+    h1 {
+        font-family: Fresh-Fruit;
+        font-size: 3.5rem;
+        color:v.$white;
+    }
 
-        .title{
-            font-family: Fresh-Fruit;
-        }
+    p{
+        color:v.$white;
     }
 }
 
+.wrap-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    h1 {
+        text-transform: uppercase;
+        color: v.$dark-grey;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        width: 80%;
+
+        .container-info{
+            border: 1px solid v.$dark-grey;
+            border-radius: 6px;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            p{
+                background-color: v.$dark-green;
+                color: v.$white;
+                border-radius: 100px;
+                box-shadow: 0 3px 4px rgba(68, 125, 90, 0.686);
+                cursor: pointer;
+                padding: .5rem 2rem;
+                text-align: center;
+                border: 0;
+                font-weight: 200;
+            }
+        }
+    }
+}

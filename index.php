@@ -5,9 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frutería La Quinta Fila</title>
-  <!-- <link rel="stylesheet" href="/styles/style.css"/> -->
-  <link rel="stylesheet" href="/styles/normalize.css">
-  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -25,8 +24,8 @@
       <nav class="nav-bar">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="/templates/contact.html">Contacto</a></li>
-          <li><a href="/templates/aboutUs.html">Acerca de nosotros</a></li>
+          <li><a href="/templates/contact.html">Acerca de</a></li>
+          <li><a href="/templates/aboutUs.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -34,73 +33,38 @@
 
   <section class="wrap-1 hero">
     <div class="hero-body">
-      <h1>Rincón Frutícola <span class="title">La Quinta Fila</span></h1>
+      <h1>Rincon Fruticola <br>La Quinta Fila</h1>
       <p>
         Tenemos muchas frutas o eso creemos. A veces nos roban los ratones
         gigantes que hay debajo de la nevera pero que se le va a hacer. La verdad estoy rellenando esto para ocupar más, Lorem impsum estaría bien usarlo pero soy masoca.
       </p>
-      <button class="button-green" role="button">Subscribe NewsLetter</button>
+      <button class="nav-btn" role="button">Subscribir NewsLetter</button>
   </section>
 
-  <section class="wrap2">
-    <img src="/assets/imgs/apple.jpg" alt="Fruta" class="fruit1" />
-  </section>
+  <section class="wrap-2">
+    <h1>Tu tiendina de confianza para una alimentación saludable</h1>
+    <div class="container">
+      <article class="container-info">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" width="7rem" height="7rem">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+        <div>
+          <h2>Portes gratuitos</h2>
+          <p>En compras superiores a 100€</p>
+        </div>
+      </article>
+      <article class="container-info">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" width="7rem" height="7rem">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+        </svg>
 
-  <section class="wrap3">
-    <img src="/assets/imgs/orange.jpg" alt="Fruta2" class="fruit2" />
+        <div>
+          <h2>Envío o Recogida</h2>
+          <p>Llegamos a cualquier sitio del sistema solar</p>
+        </div>
+      </article>
+    </div>
   </section>
-
-  <section class="wrap4">
-    <h2 class="size-3rem">¿Tienes hambre? Nosotros también</h2>
-    <p>
-      Por eso a veces comemos nuestros productos de alta calidad, asi que si
-      no te llega el envío es porque se lo comío alguien
-    </p>
-    <ol class="list">
-      <li>
-        <p><span class="span-1">59% </span>de usuarios contentos</p>
-      </li>
-      <li>
-        <p>
-          <span class="span-1">150M+</span>
-          de ventas
-        </p>
-      </li>
-      <li>
-        <p>
-          <span class="span-1">100%</span>
-          fruta no contaminada (o eso creemos)
-        </p>
-      </li>
-      <li>
-        <p>
-          <span class="span-1">41%</span>
-          de reviews negativas son de sucios cárnivoros
-        </p>
-      </li>
-    </ol>
-  </section>
-
-  <section class="wrap5">
-    <h2>
-      <span class="green">Nuestra misión es</span> ganar dinero a tu cost.... <span class="green">Alimentarte y que estes
-        sano.</span>
-    </h2>
-    <p>Nos preocupamos por tu salud, asi que damos lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor (Ayuda por favor quiero vacaciones de 342 años, la vida de adulto es dura por este mundo capitalista que nos hace creer que trabajar y hacer dinero es hacer lo correcto y lo demás perder el tiempo pero yo solo quiero bailar en Bangkok 24/7).</p>
-  </section>
-
-  <section class="wrap6">
-    <ol>
-      <li>Pide tu fruta <br>
-        <p>Llegamos a cualquier sitio de este sistema solar.</p>
-      </li><br>
-      <li>Envío y recogida <br>
-        <p>Lo enviamos para que lo recogas, si está vacío no es nuestro problema.</p>
-      </li>
-    </ol>
-  </section>
-  </div>
-  <h2 class="align-center margin-bot-1rem green">Nuestros Productos</h2>
 
   <!--Carrusel imágenes-->
   <div class="carousel">
