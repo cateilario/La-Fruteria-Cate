@@ -10,27 +10,60 @@ body {
   font-family: Open;
 }
 
-nav {
+header {
+  min-height: 10vh;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  width: 400px;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 3rem;
 }
 
-nav ul {
-  margin-left: 35rem;
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-btn {
+  background-color: #4e7954;
+  color: #f0f0f0;
+  border-radius: 100px;
+  box-shadow: 0 3px 4px rgba(68, 125, 90, 0.686);
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.9rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: #689a64;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-bar ul li {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #2b2a2a;
+  font-weight: 600;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
