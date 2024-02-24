@@ -4,6 +4,8 @@ require 'funciones/actualizar.php';
 require 'funciones/borrar.php';
 require 'funciones/crear.php';
 
+// Se ha modificado stock para poder insertar items-> ALTER TABLE stock MODIFY COLUMN usuarios_id INT DEFAULT NULL;
+
 $conn = conectarDB();
 
 // var_dump($db);

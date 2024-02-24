@@ -21,6 +21,6 @@ try {
     }
 
 } catch (Exception $e) {
-    echo 'error ' . $e;
+    echo 'Error: ' . $e->getMessage();
 }
 
