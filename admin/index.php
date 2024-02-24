@@ -57,6 +57,9 @@ $result = mysqli_query($conn, $query);
 
         <fieldset>
             <legend>Actualizar</legend>
+            <label for="update_id">ID</label>
+            <input type="text" name="update_id" id="update_id">
+
             <label for="update_nombre">Nombre</label>
             <input type="text" name="update_nombre" id="update_nombre">
 
