@@ -32,7 +32,7 @@
           <li><a href="templates/contact.php">Contacto</a></li>
           <li><a href="templates/aboutUs.php">Acerca de Nosotros</a></li>
         </ul>
-        <button class="button-green-nav" role="button">Register/Log-In</button>
+        <span class="button-green-nav" role="button"><a href="templates/login.php">Login</a></span>
 
       </nav>
     </header>

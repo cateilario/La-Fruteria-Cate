@@ -38,7 +38,7 @@ $conn = conectarDB();
 
             if (mysqli_num_rows($result) > 0) {
                 echo '<p class="success">Login correcto</p>';
-                header("Location:admin.php");
+                header("Location:../admin/index.php");
             } else {
                 echo '<p class="error">No existe</p>';
             }
