@@ -1,5 +1,9 @@
 <?php
 require '../includes/config/database.php';
+require 'funciones/actualizar.php';
+require 'funciones/borrar.php';
+require 'funciones/crear.php';
+
 $conn = conectarDB();
 
 // var_dump($db);
@@ -20,36 +24,53 @@ $result = mysqli_query($conn, $query);
 <body>
     <h1>Holaaaa admin</h1>
 
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Crear</legend>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
+            <label for="create_nombre">Nombre</label>
+            <input type="text" name="create_nombre" id="create_nombre">
 
-            <label for="cantidad">Cantidad</label>
-            <input type="text" name="cantidad" id="cantidad">
+            <label for="create_cantidad">Cantidad</label>
+            <input type="text" name="create_cantidad" id="create_cantidad">
 
-            <label for="precio">Precio</label>
-            <input type="text" name="precio" id="precio">
+            <label for="create_precio">Precio</label>
+            <input type="text" name="create_precio" id="create_precio">
 
-            <label for="categoria"></label>
-            <input type="text" name="categoria" id="categoria">
+            <label for="create_categoria">Categoria</label>
+            <input type="text" name="create_categoria" id="create_categoria">
 
-            <label for="imagen">Imagen</label>
-            <input type="file" name="imagen" id="imagen">
+            <label for="create_imagen">Imagen</label>
+            <input type="file" name="create_imagen" id="create_imagen">
+
+            <input type="submit" name="insert" value="Insertar">
 
         </fieldset>
 
         <fieldset>
             <legend>Borrar</legend>
-            <label for="id">ID</label>
-            <input type="text" placeholder="1,2,3...">
-            <input type="submit" value="Borrar">
+            <label for="delete_id">ID</label>
+            <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
+            <input type="submit" name="delete" value="Borrar">
         </fieldset>
 
         <fieldset>
             <legend>Actualizar</legend>
-            <label for=""></label>
+            <label for="update_nombre">Nombre</label>
+            <input type="text" name="update_nombre" id="update_nombre">
+
+            <label for="update_cantidad">Cantidad</label>
+            <input type="text" name="update_cantidad" id="update_cantidad">
+
+            <label for="update_precio">Precio</label>
+            <input type="text" name="update_precio" id="update_precio">
+
+            <label for="update_categoria">Categoria</label>
+            <input type="text" name="update_categoria" id="update_categoria">
+
+            <label for="update_imagen">Imagen</label>
+            <input type="file" name="update_imagen" id="update_imagen">
+
+            <input type="submit" name="update" value="Actualizar">
         </fieldset>
     </form>
 
