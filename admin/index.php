@@ -49,13 +49,6 @@ $result = mysqli_query($conn, $query);
         </fieldset>
 
         <fieldset>
-            <legend>Borrar</legend>
-            <label for="delete_id">ID</label>
-            <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
-            <input type="submit" name="delete" value="Borrar">
-        </fieldset>
-
-        <fieldset>
             <legend>Actualizar</legend>
             <label for="update_id">ID</label>
             <input type="text" name="update_id" id="update_id">
@@ -76,6 +69,13 @@ $result = mysqli_query($conn, $query);
             <input type="file" name="update_imagen" id="update_imagen">
 
             <input type="submit" name="update" value="Actualizar">
+        </fieldset>
+
+        <fieldset>
+            <legend>Borrar</legend>
+            <label for="delete_id">ID</label>
+            <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
+            <input type="submit" name="delete" value="Borrar">
         </fieldset>
     </form>
 
