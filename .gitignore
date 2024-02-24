@@ -1,3 +1,4 @@
 .DStore
 .DS_Store
 Dump20240216 1.sql
+includes/config/database.php
