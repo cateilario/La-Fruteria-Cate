@@ -27,10 +27,10 @@
     <header>
       <nav>
         <ul>
-          <li class="logo"><a href="/index.html"><img src="/assets/imgs/logo.png" alt="Logo" class="logo" /> </a></li>
+          <li class="logo"><a href="index.php"><img src="assets/imgs/logo.png" alt="Logo" class="logo" /> </a></li>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="/templates/contact.html">Contacto</a></li>
-          <li><a href="/templates/aboutUs.html">Acerca de Nosotros</a></li>
+          <li><a href="templates/contact.php">Contacto</a></li>
+          <li><a href="templates/aboutUs.php">Acerca de Nosotros</a></li>
         </ul>
         <button class="button-green-nav" role="button">Register/Log-In</button>
 
@@ -49,11 +49,12 @@
       </section>
 
       <section class="wrap2">
-        <img src="/assets/imgs/apple.jpg" alt="Fruta" class="fruit1" />
+        <img src="assets/imgs/apple.jpg" alt="Fruta" class="fruit1" />
+        
       </section>
 
       <section class="wrap3">
-        <img src="/assets/imgs/orange.jpg" alt="Fruta2" class="fruit2" />
+        <img src="assets/imgs/orange.jpg" alt="Fruta2" class="fruit2" />
       </section>
 
       <section class="wrap4">
@@ -117,10 +118,10 @@
       <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
 
       <footer class="footer">
-        <div class="f1"><img src="/assets/imgs/logo.png" alt="Logo" class="logo"><p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p></div>
+        <div class="f1"><img src="assets/imgs/logo.png" alt="Logo" class="logo"><p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p></div>
         <div class="f2">Company <p>- About us <br> - FAQ <br>- Contact Us</p></div>
         <div class="f3">News <p>- Kike me pega <br>- Testimonios <br>- Help</p></div>
-        <div class="f4">Socials <div><img src="/assets/imgs/xtiwt.png" alt="" class="logoF"><br><img src="/assets/imgs/facebook.png" alt="" class="logoF"><br><img src="/assets/imgs/instagram.png" alt="" class="logoF"></div></div>
+        <div class="f4">Socials <div><img src="assets/imgs/xtiwt.png" alt="" class="logoF"><br><img src="assets/imgs/facebook.png" alt="" class="logoF"><br><img src="assets/imgs/instagram.png" alt="" class="logoF"></div></div>
       </footer>
 
     <script src="./scripts/main.js"></script>
