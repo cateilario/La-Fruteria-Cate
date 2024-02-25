@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $query);
 </head>
 
 <body>
-    <h1>Holaaaa admin</h1>
+    <h1>Holaaaa Kikeee</h1>
 
     <form action="#" method="post" enctype="multipart/form-data">
         <fieldset>

@@ -31,7 +31,7 @@ try {
         } else {
             $sql = "UPDATE stock SET";
 
-            // Add fields to update based on provided values
+            // se insertan los campos si estan escritos con concatenacion.
             if (!empty($nombre)) {
                 $sql .= " nombre='$nombre',";
             }
@@ -50,18 +50,21 @@ try {
 
             if ($imagen && $imagen['error'] != UPLOAD_ERR_NO_FILE) {
                 $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
-                
+
                 $upload_directory = "../images/";
                 move_uploaded_file($imagen['tmp_name'], $upload_directory . $nombreImagen);
 
                 $sql .= " imagen='$nombreImagen',";
             }
 
-            // Remove trailing comma
+            // Borrar la coma
             $sql = rtrim($sql, ',');
 
             $sql .= " WHERE id='$id'";
             mysqli_query($conn, $sql);
+
+            header("Location: " . $_SERVER['REQUEST_URI']);
+            exit();
         }
     }
 } catch (Exception $e) {

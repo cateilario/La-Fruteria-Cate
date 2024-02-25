@@ -20,6 +20,9 @@ try {
 
             // Para eliminar la imagen
             unlink('../images/' . $fruta['imagen']);
+
+            header("Location: " . $_SERVER['REQUEST_URI']);
+            exit();
         } else {
             echo 'Error fetching item from database.';
         }

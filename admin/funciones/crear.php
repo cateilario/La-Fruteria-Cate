@@ -57,6 +57,9 @@ try {
 
             $sql = "INSERT INTO stock (nombre , cantidad, precio, categoria, imagen) VALUES ('$nombre', '$cantidad', '$precio', '$categoria', '$nombreImagen')";
             mysqli_query($conn, $sql);
+
+            header("Location: " . $_SERVER['REQUEST_URI']);
+            exit();
         }
     }
 } catch (Exception $e) {
