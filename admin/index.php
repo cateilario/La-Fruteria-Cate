@@ -100,13 +100,13 @@ $result = mysqli_query($conn, $query);
                     <?php echo $fruta['cantidad']; ?>
                 </td>
                 <td>
-                    <?php echo $fruta['precio']; ?>
+                    <?php echo $fruta['precio'] . '$'; ?>
                 </td>
                 <td>
                     <?php echo $fruta['categoria']; ?>
                 </td>
                 <td>
-                    <?php echo "<img src='../images/$imagen'></img>"; ?>
+                <?php echo "<img src='../images/{$fruta['imagen']}'></img>"; ?>
                 </td>
             </tr>
         <?php endforeach; ?>
