@@ -25,6 +25,7 @@ $result = mysqli_query($conn, $query);
 
 <body>
     <h1>Holaaaa Kikeee</h1>
+    <a href="../index.php">Exit</a>
 
     <form action="#" method="post" enctype="multipart/form-data">
         <fieldset>
@@ -44,7 +45,7 @@ $result = mysqli_query($conn, $query);
             <label for="create_imagen">Imagen</label>
             <input type="file" name="create_imagen" id="create_imagen">
 
-            <input type="submit" name="insert" value="Insertar">
+            <button type="submit" name="insert">Insertar</button>
 
         </fieldset>
 
@@ -68,14 +69,14 @@ $result = mysqli_query($conn, $query);
             <label for="update_imagen">Imagen</label>
             <input type="file" name="update_imagen" id="update_imagen">
 
-            <input type="submit" name="update" value="Actualizar">
+            <button type="submit" name="update">Actualizar</button>
         </fieldset>
 
         <fieldset>
             <legend>Borrar</legend>
             <label for="delete_id">ID</label>
             <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
-            <input type="submit" name="delete" value="Borrar">
+            <button type="submit" name="delete">Borrar</button>
         </fieldset>
     </form>
 
