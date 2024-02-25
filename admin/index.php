@@ -106,7 +106,7 @@ $result = mysqli_query($conn, $query);
                     <?php echo $fruta['categoria']; ?>
                 </td>
                 <td>
-                    <?php echo "<img>" . $fruta['imagen'] . "</img>"; ?>
+                    <?php echo "<img src='../images/$imagen'></img>"; ?>
                 </td>
             </tr>
         <?php endforeach; ?>
