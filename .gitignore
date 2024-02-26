@@ -1,2 +1,7 @@
 .DStore
 .DS_Store
+includes/config/database.php
+includes/config/Dump20240216 1.sql
+.vscode
+fruteria.session.sql
+images
