@@ -14,11 +14,11 @@ $result = mysqli_query($conn, $query);
         </h3>
 
         <p>
-            <?php echo $item['precio'] . '$'; ?>
+            Precio: <?php echo $item['precio'] . '$'; ?>
 
         </p>
         <p>
-            <?php echo $item['categoria']; ?>
+            Categoría: <?php echo $item['categoria']; ?>
 
         </p>
         <input type="button" value="Add">
