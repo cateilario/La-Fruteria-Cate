@@ -20,10 +20,7 @@
         </svg></a>
     </div>
     <div class="nav-list">
-      <button class="nav-btn" role="button">
-        <i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>
-        <a href="templates/login_register.php">Log-In</a>
-      </button>
+      <a href="templates/login_register.php" class="nav-btn"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</a>
       <nav class="nav-bar">
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -41,7 +38,7 @@
         Tenemos muchas frutas o eso creemos. A veces nos roban los ratones
         gigantes que hay debajo de la nevera pero que se le va a hacer. La verdad estoy rellenando esto para ocupar más, Lorem impsum estaría bien usarlo pero soy masoca.
       </p>
-      <button class="nav-btn" role="button">Subscribir NewsLetter</button>
+      <button class="nav-btn" role="button">Suscribirse a NewsLetter</button>
   </section>
 
   <section class="wrap-2">
@@ -172,18 +169,20 @@
         </div>
       </article>
     </div>
-    <h2 class="align-center margin-bot-1rem green">Nuestros Productos</h2>
 
     <!--Carrusel imágenes-->
-    <div class="carousel">
-      <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
-      <div id="images" class="image-container"></div>
-      <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
-    </div>
-    <div class="controls">
-      <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
-      <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
-    </div>
+    <section>
+      <div class="carousel">
+        <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
+        <div id="images" class="image-container"></div>
+        <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
+      </div>
+      <div class="controls">
+        <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
+        <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
+      </div>
+    </section>
+
     <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
 
     <footer class="footer">
