@@ -1,8 +1,14 @@
 .DStore
 .DS_Store
+<<<<<<< HEAD
+node_modules/
+package-lock.json
+package.json
+=======
 includes/config/database.php
 includes/config/Dump20240216 1.sql
 .vscode
 fruteria.session.sql
 images
 .gitignore
+>>>>>>> 8a2b1efd6bac6446ad12947f1f7ca1d0f477bec8
