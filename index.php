@@ -20,7 +20,10 @@
         </svg></a>
     </div>
     <div class="nav-list">
-      <button class="nav-btn" role="button"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</button>
+      <button class="nav-btn" role="button">
+        <i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>
+        <a href="templates/login_register.php">Log-In</a>
+      </button>
       <nav class="nav-bar">
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -169,33 +172,34 @@
         </div>
       </article>
     </div>
-  </section>
+    <h2 class="align-center margin-bot-1rem green">Nuestros Productos</h2>
 
-  <!--Carrusel imágenes-->
-  <!-- <section class="carousel">
-    <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
-    <div id="images" class="image-container"></div>
-    <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
-
+    <!--Carrusel imágenes-->
+    <div class="carousel">
+      <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
+      <div id="images" class="image-container"></div>
+      <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
+    </div>
     <div class="controls">
       <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
       <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
     </div>
     <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
-  </section> -->
 
-  <footer>
-    <p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p>
-    <div class="f2">Company <p>- About us <br> - FAQ <br>- Contact Us</p>
-    </div>
-    <div class="f3">News <p>- Kike me pega <br>- Testimonios <br>- Help</p>
-    </div>
-    <div class="f4">Socials <div><img src="/assets/imgs/xtiwt.png" alt="" class="logoF"><br><img src="/assets/imgs/facebook.png" alt="" class="logoF"><br><img src="/assets/imgs/instagram.png" alt="" class="logoF"></div>
-    </div>
-  </footer>
+    <footer class="footer">
+      <div class="f1"><img src="/assets/imgs/logo.png" alt="Logo" class="logo">
+        <p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p>
+      </div>
+      <div class="f2">Company <p>- About us <br> - FAQ <br>- Contact Us</p>
+      </div>
+      <div class="f3">News <p>- Kike me pega <br>- Testimonios <br>- Help</p>
+      </div>
+      <div class="f4">Socials <div><img src="/assets/imgs/xtiwt.png" alt="" class="logoF"><br><img src="/assets/imgs/facebook.png" alt="" class="logoF"><br><img src="/assets/imgs/instagram.png" alt="" class="logoF"></div>
+      </div>
+    </footer>
 
-  <script src="./scripts/main.js"></script>
-  <script src="http//tholman.com/elevator.js/elevator.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="http//tholman.com/elevator.js/elevator.js"></script>
 </body>
 
 </html>

@@ -83,5 +83,5 @@ UNLOCK TABLES;
 
 -- Dump completed on 2024-02-16  9:39:17
 
-INSERT INTO usuarios (username, email, password) 
-VALUES ("admin", "admin@admin.com", 1234);
+INSERT INTO usuarios (id,username, email, password) 
+VALUES (1,"admin", "admin@admin.com", 1234);
