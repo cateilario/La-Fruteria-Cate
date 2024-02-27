@@ -31,11 +31,6 @@ header {
     gap: .6rem;
     align-items: center;
     transition: all .5s ease-in-out;
-
-    a{
-        text-decoration: none;
-        color: white;
-    }
 }
 
 .nav-btn:hover{
@@ -53,8 +48,13 @@ header {
 
         a {
             text-decoration: none;
-            color: v.$dark-grey;
+            color: black;
             font-weight: 600;
+            transition: all .3s ease-in;
+        }
+
+        a:hover{
+            color: v.$light-grey;
         }
     }
 }

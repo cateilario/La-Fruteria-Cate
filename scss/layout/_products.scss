@@ -4,27 +4,35 @@
     width: 90%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: .7rem;
+    gap: 1rem;
 
     article{
-        border: 1px solid v.$light-grey;
+        border: .5px solid #c9c9c9;
         border-radius: 6px;
+        box-shadow: 0 5px 8px v.$light-grey;
+        transition: all .5s ease-in-out;
+
+        article:hover{
+            transform: translateY(-5px);
+        }
 
         img{
-            display: block;
             width: 100%;
+            object-fit: contain;
+            aspect-ratio: 1/1;
         }
 
         .card-body {
+            padding: 0 1rem;
                 h2 {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
         
                 p {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
         
                     span {
-                        font-size: .9rem;
+                        font-size: .7rem;
                     }
                 }
             }
@@ -37,7 +45,8 @@
                 button {
                     border: 0;
                     border-radius: 4px;
-                    padding: .5rem 1.5rem;
+                    width: 100%;
+                    padding: .8rem 0;
                     background-color: v.$dark-green;
                     color: v.$white;
                     cursor: pointer;
