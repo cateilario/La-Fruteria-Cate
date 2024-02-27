@@ -1,0 +1,7 @@
+@use './../base/variables' as v;
+
+footer{
+    width: 100%;
+    background-color: v.$dark-green;
+    color: white;
+}

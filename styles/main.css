@@ -146,43 +146,46 @@ a:link, a:visited, a:active {
 }
 
 .products-grid {
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
-
 .products-grid article {
-  border: 1px solid rgb(164, 162, 162);
+  border: 1px solid #7c7979;
   border-radius: 6px;
 }
-
-.card-img {
-  max-width: 100%;
+.products-grid article img {
+  display: block;
+  width: 100%;
 }
-.card-body h2 {
+.products-grid article .card-body h2 {
   font-size: 1.2rem;
 }
-.card-body p {
+.products-grid article .card-body p {
   font-size: 1.2rem;
 }
-.card-body p span {
+.products-grid article .card-body p span {
   font-size: 0.9rem;
 }
-
-.card-footer {
+.products-grid article .card-footer {
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
-.card-footer button {
+.products-grid article .card-footer button {
   border: 0;
   border-radius: 4px;
   padding: 0.5rem 1.5rem;
   background-color: #426b52;
   color: #f0f0f0;
   cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  background-color: #426b52;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -69,7 +69,7 @@
     <h1>Productos</h1>
     <div class="products-grid">
       <article>
-        <img src="/la-fruteria-cate/assets/imgs/product" alt="">
+        <img src="./assets/imgs/product.png" alt="">
         <div class="card-body">
           <h2>Fresas</h2>
           <p>8,90 <span>€/kg</span></p>
@@ -79,7 +79,7 @@
         </div>
       </article>
       <article>
-        <img src="./assets/imgs/product2" alt="">
+        <img src="./assets/imgs/product2.png" alt="">
         <div class="card-body">
           <h2>Lechuga</h2>
           <p>5,90 <span>€/kg</span></p>
@@ -89,7 +89,7 @@
         </div>
       </article>
       <article>
-        <img src="./assets/imgs/product3" alt="">
+        <img src="./assets/imgs/product3.png" alt="">
         <div class="card-body">
           <h2>Alcachofas</h2>
           <p>10,90 <span>€/kg</span></p>
@@ -99,7 +99,7 @@
         </div>
       </article>
       <article>
-        <img src="" alt="">
+        <img src="./assets/imgs/product4.png" alt="">
         <div class="card-body">
           <h2>Piña</h2>
           <p>3,90 <span>€/kg</span></p>
@@ -109,7 +109,7 @@
         </div>
       </article>
       <article>
-        <img src="" alt="">
+        <img src="./assets/imgs/product5.png" alt="">
         <div class="card-body">
           <h2>Manzana</h2>
           <p>2,90 <span>€/kg</span></p>
@@ -119,7 +119,7 @@
         </div>
       </article>
       <article>
-        <img src="" alt="">
+        <img src="./assets/imgs/product6.png" alt="">
         <div class="card-body">
           <h2>Aguacate</h2>
           <p>4,30 <span>€/kg</span></p>
@@ -129,7 +129,7 @@
         </div>
       </article>
       <article>
-        <img src="" alt="">
+        <img src="./assets/imgs/product7.png" alt="">
         <div class="card-body">
           <h2>Melón</h2>
           <p>5,20 <span>€/kg</span></p>
@@ -139,7 +139,7 @@
         </div>
       </article>
       <article>
-        <img src="" alt="">
+        <img src="./assets/imgs/product10.png" alt="">
         <div class="card-body">
           <h2>Arándanos</h2>
           <p>4,80 <span>€/kg</span></p>
@@ -149,7 +149,7 @@
         </div>
       </article>
       <article>
-        <img src="" alt="">
+        <img src="./assets/imgs/product9.png" alt="">
         <div class="card-body">
           <h2>Naranjas</h2>
           <p>3,50 <span>€/kg</span></p>
@@ -159,9 +159,7 @@
         </div>
       </article>
       <article>
-        <div class="card-img">
-          <img src="./assets/imgs/product10.png" alt="">
-        </div>
+        <img src="./assets/imgs/product8.png" alt="">
         <div class="card-body">
           <h2>Plátanos</h2>
           <p>2,80 <span>€/kg</span></p>
@@ -174,7 +172,7 @@
   </section>
 
   <!--Carrusel imágenes-->
-  <section class="carousel">
+  <!-- <section class="carousel">
     <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
     <div id="images" class="image-container"></div>
     <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
@@ -184,12 +182,10 @@
       <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
     </div>
     <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
-  </section>
+  </section> -->
 
   <footer>
-    <div class="f1"><img src="/assets/imgs/logo.png" alt="Logo" class="logo">
-      <p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p>
-    </div>
+    <p>Ayudadnos, nuestro jefe nos tiene encerrados en un container debajo de una fábrica en Hanoi</p>
     <div class="f2">Company <p>- About us <br> - FAQ <br>- Contact Us</p>
     </div>
     <div class="f3">News <p>- Kike me pega <br>- Testimonios <br>- Help</p>
