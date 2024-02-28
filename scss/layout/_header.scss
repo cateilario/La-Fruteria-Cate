@@ -1,0 +1,71 @@
+@use './../base/variables' as v;
+
+header {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 3rem;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-btn {
+    background-color: v.$dark-green;
+    color:v.$white;
+    border-radius: 100px;
+    box-shadow: 0 3px 4px rgba(68, 125, 90, 0.686);
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: .9rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+    transition: all .5s ease-in-out;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.nav-btn:hover{
+    background-color: v.$dark-green2;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+    li {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+
+        a {
+            text-decoration: none;
+            color: v.$dark-grey;
+            font-weight: 600;
+        }
+    }
+}
+
+a {
+
+    &:link,
+    &:visited,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+

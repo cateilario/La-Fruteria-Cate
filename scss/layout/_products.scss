@@ -1,0 +1,52 @@
+@use './../base/variables' as v;
+
+.products-grid{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .7rem;
+
+    article{
+        border: 1px solid v.$light-grey;
+        border-radius: 6px;
+
+        img{
+            display: block;
+            width: 100%;
+        }
+
+        .card-body {
+                h2 {
+                    font-size: 1.2rem;
+                }
+        
+                p {
+                    font-size: 1.2rem;
+        
+                    span {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        
+            .card-footer {
+                display: flex;
+                justify-content: center;
+                padding: 1rem;
+        
+                button {
+                    border: 0;
+                    border-radius: 4px;
+                    padding: .5rem 1.5rem;
+                    background-color: v.$dark-green;
+                    color: v.$white;
+                    cursor: pointer;
+                }
+            }
+    }
+}
+
+
+
+
+
