@@ -33,6 +33,9 @@
 
   <section class="wrap-1 hero">
     <div class="hero-body">
+      <button>
+        <img src="" alt="">
+      </button>
       <h1>Rincon Fruticola <br>La Quinta Fila</h1>
       <p>
         Tenemos muchas frutas o eso creemos. A veces nos roban los ratones
