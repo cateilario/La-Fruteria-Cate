@@ -8,6 +8,12 @@
     src: url(/la-fruteria-cate/assets/fonts/OpenSans-Regular.ttf);
 }
 
-body{
+*{
     font-family: Open;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }

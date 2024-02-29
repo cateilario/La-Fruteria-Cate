@@ -6,8 +6,14 @@
   font-family: "Open";
   src: url(/la-fruteria-cate/assets/fonts/OpenSans-Regular.ttf);
 }
-body {
+* {
   font-family: Open;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -27,7 +33,7 @@ header {
 }
 
 .nav-btn {
-  background-color: #3d634b;
+  background-color: #355641;
   color: #f0f0f0;
   border-radius: 100px;
   box-shadow: 0 3px 4px rgba(68, 125, 90, 0.686);
@@ -44,13 +50,13 @@ header {
 }
 
 .nav-btn:hover {
-  background-color: #61905e;
+  background-color: #598356;
 }
 
 .nav-bar ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 .nav-bar ul li {
   font-size: 1.1rem;
@@ -75,7 +81,7 @@ a:link, a:visited, a:active {
 }
 
 .hero {
-  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 90%);
+  clip-path: ellipse(79% 58% at 42% 35%);
   background: url("/la-fruteria-cate/assets/imgs/hero.jpg") center/cover;
   height: 90vh;
   min-height: 90vh;
@@ -113,7 +119,7 @@ a:link, a:visited, a:active {
 
 .wrap-2 {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,6 +128,7 @@ a:link, a:visited, a:active {
 .wrap-2 h1 {
   text-transform: uppercase;
   color: #3b3a3a;
+  font-family: Fresh-Fruit;
 }
 .wrap-2 .container {
   display: flex;
@@ -140,7 +147,7 @@ a:link, a:visited, a:active {
   gap: 2rem;
 }
 .wrap-2 .container .container-info p {
-  background-color: #3d634b;
+  background-color: #355641;
   color: #f0f0f0;
   border-radius: 100px;
   padding: 0.5rem 2rem;
@@ -153,16 +160,17 @@ a:link, a:visited, a:active {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .products-grid article {
   border: 0.5px solid #c9c9c9;
   border-radius: 6px;
   box-shadow: 0 5px 8px #7c7979;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-out;
 }
-.products-grid article article:hover {
+.products-grid article:hover {
   transform: translateY(-5px);
+  border: 1px solid #355641;
 }
 .products-grid article img {
   width: 100%;
@@ -191,15 +199,55 @@ a:link, a:visited, a:active {
   border-radius: 4px;
   width: 100%;
   padding: 0.8rem 0;
-  background-color: #3d634b;
+  background-color: #355641;
   color: #f0f0f0;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.products-grid article .card-footer button:hover {
+  background-color: #598356;
 }
 
 footer {
   width: 100%;
-  background-color: #3d634b;
+  margin-bottom: -5rem;
+  background-color: #355641;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.info-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-bottom: 0.5px solid #f0f0f0;
+  padding-bottom: 2rem;
+  width: 80%;
+}
+.info-1 h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.info-1 p {
+  font-size: 0.8rem;
+}
+
+.sm-container {
+  display: flex;
+  flex-direction: column;
+}
+.sm-container .sm-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+.info-2 {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */

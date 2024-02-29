@@ -34,13 +34,13 @@ header {
 }
 
 .nav-btn:hover{
-    background-color: v.$dark-green2;
+    background-color: v.$green;
 }
 
 .nav-bar ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
 
     li {
         font-size: 1.1rem;
