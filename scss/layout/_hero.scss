@@ -7,7 +7,7 @@
 .hero{
     clip-path: ellipse(79% 58% at 42% 35%);
     background: url('/la-fruteria-cate/assets/imgs/hero.jpg') center/cover;
-    height: 90vh;
+    height: 100vh;
     min-height: 90vh;
 }
 
@@ -28,7 +28,7 @@
     justify-content: center;
     gap: 1rem;
     height: 90%;
-    width: 50%;
+    width: 70%;
     text-align: left;
     padding: 0 5rem;
     
@@ -55,11 +55,12 @@
         text-transform: uppercase;
         color: v.$dark-grey;
         font-family: Fresh-Fruit;
+        text-align: center;
     }
 
     .container{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         align-items: center;
         gap: 1rem;
         width: 80%;

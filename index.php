@@ -24,8 +24,8 @@
       <nav class="nav-bar">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="/templates/contact.html">Acerca de</a></li>
-          <li><a href="/templates/aboutUs.html">Contacto</a></li>
+          <li><a href="/templates/contact.php">Acerca de</a></li>
+          <li><a href="/templates/aboutUs.php">Contacto</a></li>
         </ul>
       </nav>
       <a href=""><i class="fa-solid fa-cart-shopping fa-lg" style="color:black;"></i></a>
@@ -169,7 +169,8 @@
     </div>
 
     <!--Carrusel imágenes-->
-    <section>
+    <section class="wrap-2">
+      <h1>Productos mas vendidos</h1>
       <div class="carousel">
         <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
         <div id="images" class="image-container"></div>
@@ -180,8 +181,6 @@
         <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
       </div>
     </section>
-
-    <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
 
     <footer>
       <div class="info-1">
@@ -211,6 +210,10 @@
         <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
       </div>
     </footer>
+
+    <button id="elevator" class="elevator">
+      <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
+    </button>
 
     <script src="./scripts/main.js"></script>
     <script src="http//tholman.com/elevator.js/elevator.js"></script>

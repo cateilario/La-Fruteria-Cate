@@ -10,6 +10,7 @@ $conn = conectarDB();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Register</title>
+    <link rel="stylesheet" href="/styles/main.css">
     <style>
         /* Hide the registration form initially */
         #registrationForm {
@@ -33,8 +34,7 @@ $conn = conectarDB();
     <button type="button" onclick="toggleRegistrationForm()">Registrarse</button>
 
     <!-- Registration form -->
-    <form id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
-        style="display:none;">
+    <form id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" style="display:none;">
         <h2>Registrarse</h2>
         <label for="newUsername">New User name</label>
         <input type="text" name="newUsername" placeholder="User name">
@@ -76,14 +76,11 @@ $conn = conectarDB();
 
                 if ($row['id'] == 1) {
                     die(header("Location:../admin/index.php"));
-
                 } else {
                     die(header("Location:cliente_index.php"));
-
                 }
             } else {
                 echo '<p class="error">Credenciales incorrectas</p>';
-
             }
         } elseif (isset($_POST['register'])) {
             $name = trim($_POST["newUsername"]);
@@ -94,16 +91,14 @@ $conn = conectarDB();
             $password = mysqli_real_escape_string($conn, $password);
 
             $query = "INSERT INTO usuarios (username, email,password) VALUES ('$name','$email','$password')";
-            $result = mysqli_query($conn,$query);
+            $result = mysqli_query($conn, $query);
 
             if (!$result) {
                 die("Error en la consulta: " . mysqli_error($conn));
             } else {
                 echo '<p class="success">Registro exitoso. Puede iniciar sesión ahora.</p>';
             }
-        
         }
-
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
     }

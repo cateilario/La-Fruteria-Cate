@@ -30,7 +30,6 @@ footer{
     }
 }
 
-
 .sm-container{
     display: flex;
     flex-direction: column;
@@ -44,4 +43,13 @@ footer{
 
 .info-2{
     font-size: .8rem;
+}
+
+.elevator{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 }
