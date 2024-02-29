@@ -1,0 +1,14 @@
+{
+  "name": "la-fruteria",
+  "version": "1.0.0",
+  "description": "**Project Manager**: Kike",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss styles/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}
