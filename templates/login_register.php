@@ -64,18 +64,22 @@ $conn = conectarDB();
             $name = mysqli_real_escape_string($conn, $name);
             $password = mysqli_real_escape_string($conn, $password);
 
-            $query = "SELECT * FROM usuarios WHERE username = '$name' AND email = '$email' AND password = '$password'";
+            $query = "SELECT id, username, email, password FROM usuarios WHERE username = '$name' AND email = '$email'";
             $result = mysqli_query($conn, $query);
 
             if (!$result) {
                 die("Error en la consulta: " . mysqli_error($conn));
             }
-
+            // usuarios password tiene que ser 255
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
 
-                if ($row['id'] == 1) {
-                    die(header("Location:../admin/index.php"));
+                if (password_verify($password, $row['password'])) {
+                    if ($row['id'] == 1) {
+                        die(header("Location:../admin/index.php"));
+                    } else {
+                        die(header("Location:cliente_index.php"));
+                    }
                 } else {
                     die(header("Location:cliente_index.php"));
                 }

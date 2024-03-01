@@ -34,8 +34,14 @@
 
   <section class="wrap-1 hero">
     <div class="hero-body">
-      <h1>Rincon Fruticola <br>La Quinta Fila</h1>
-      <p>Tenemos muchas frutas o eso creemos. A veces nos roban los ratones gigantes que hay debajo de la nevera pero que se le va a hacer. La verdad estoy rellenando esto para ocupar más, Lorem impsum estaría bien usarlo pero soy masoca.</p>
+      <button id="dark-mode-toggle">
+        <img src="/assets/imgs/night-mode.png" alt="Dark Mode">
+      </button>
+      <h1>Rincón Fruticola <br>La Quinta Fila</h1>
+      <p>
+        Tenemos muchas frutas o eso creemos. A veces nos roban los ratones
+        gigantes que hay debajo de la nevera pero que se le va a hacer. La verdad estoy rellenando esto para ocupar más, Lorem impsum estaría bien usarlo pero soy masoca.
+      </p>
       <button class="nav-btn" role="button">Suscribirse a NewsLetter</button>
   </section>
 
