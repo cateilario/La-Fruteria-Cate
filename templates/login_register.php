@@ -10,7 +10,7 @@ $conn = conectarDB();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Register</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href=".././styles/main.css">
     <style>
         /* Hide the registration form initially */
         #registrationForm {
@@ -19,38 +19,41 @@ $conn = conectarDB();
     </style>
 </head>
 
-<body>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <h2>Login/Register</h2>
-        <label for="username">User name</label>
-        <input type="text" name="username" placeholder="User name">
-        <label for="email">Email</label>
+<body class="log-in">
+    <form id="loginForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <h2>Inicio sesión</h2>
+        <label for="username">Nombre usuario:</label>
+        <input type="text" name="username">
+        <label for="email">Email:</label>
         <input type="text" name="email" id="email">
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit" name="login">Iniciar</button>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password">
+        <div class="form-btns">
+            <button type="submit" name="login">Iniciar sesión</button>
+            <button type="button" onclick="toggleRegistrationForm()">Registrarse</button>
+        </div>
     </form>
-
-    <button type="button" onclick="toggleRegistrationForm()">Registrarse</button>
 
     <!-- Registration form -->
     <form id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" style="display:none;">
         <h2>Registrarse</h2>
-        <label for="newUsername">New User name</label>
+        <label for="newUsername">Nombre usuario:</label>
         <input type="text" name="newUsername" placeholder="User name">
-        <label for="newEmail">Email</label>
+        <label for="newEmail">Email:</label>
         <input type="text" name="newEmail" id="newEmail" placeholder="Email">
-        <label for="newPassword">New Password</label>
+        <label for="newPassword">Contraseña:</label>
         <input type="password" name="newPassword" placeholder="Password">
-
-        <button type="submit" name="register">Registrarse</button>
-
+        <div class="form-btns">
+            <button type="submit" name="register">Registrarse</button>
+        </div>
     </form>
 
     <script>
         function toggleRegistrationForm() {
-            var registrationForm = document.getElementById('registrationForm');
+            const registrationForm = document.getElementById('registrationForm');
+            const loginForm = document.getElementById("loginForm");
             registrationForm.style.display = (registrationForm.style.display === 'none') ? 'block' : 'none';
+            loginForm.style.display = "none";
         }
     </script>
 
@@ -81,7 +84,7 @@ $conn = conectarDB();
                         die(header("Location:cliente_index.php"));
                     }
                 } else {
-                    die(header("Location:cliente_index.php"));
+                    echo '<p class="error">Credenciales incorrectas</p>';
                 }
             } else {
                 echo '<p class="error">Credenciales incorrectas</p>';
@@ -94,7 +97,9 @@ $conn = conectarDB();
             $name = mysqli_real_escape_string($conn, $name);
             $password = mysqli_real_escape_string($conn, $password);
 
-            $query = "INSERT INTO usuarios (username, email,password) VALUES ('$name','$email','$password')";
+            $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = "INSERT INTO usuarios (username, email,password) VALUES ('$name','$email','$hashPassword')";
             $result = mysqli_query($conn, $query);
 
             if (!$result) {
