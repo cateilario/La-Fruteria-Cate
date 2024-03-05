@@ -173,7 +173,7 @@
       </article>
     </div>
 
-    <!--Carrusel imágenes-->
+    <!--Carrusel_imágenes-->
     <section>
       <div class="carousel">
         <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
