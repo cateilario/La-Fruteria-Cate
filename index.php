@@ -173,7 +173,7 @@
       </article>
     </div>
 
-    <!--Carrusel imágenes-->
+    <!--Slider productos-->
     <section class="container">
         <div class="card-container swiper">
             <div class="card-content">
@@ -245,7 +245,14 @@
 
                 </div>
             </div>
-
+            <div class="swiper-button-prev">
+                <img src="assets/imgs/arrow-left-s-line.svg" alt="arrowl">
+            </div>
+            <div class="swiper-button-next">
+                <img src="assets/imgs/arrow-right-s-line.svg" alt="arrowr">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
 
     <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
