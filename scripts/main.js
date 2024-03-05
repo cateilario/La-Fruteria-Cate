@@ -359,3 +359,7 @@ elevator.elevate();
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
 });
+
+// Lógica correspondiente al slider de artículos más vendidos
+
+
