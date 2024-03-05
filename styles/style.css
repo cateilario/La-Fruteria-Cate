@@ -519,3 +519,32 @@ body.dark-mode {
   border-radius: 1.25rem;
   overflow: hidden;
 }
+
+.card-image{
+  position: relative;
+  background-color: rgb(83, 227, 55);
+  padding-top: 4rem;
+  margin-bottom: -.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body{
+  background: radial-gradient(rgb(145, 135, 135), rgb(118, 109, 109));
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card-img{
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 4rem;
+}
+
+
