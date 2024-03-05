@@ -191,6 +191,61 @@
                         </div>
                       </article>
 
+                      <article class="card-article swiper-slide">
+                        <div class="card-image">
+                            <img src="assets/imgs/product5.png" alt="image" class="card-img">
+                            <div class="card-shadow"></div>
+                        </div>
+                        <div class="card-body">
+                          <h2 class="card-name">Manzana</h2>
+                          <p class="card-price">2,90 <span class="card-span">€/kg</span></p>
+            
+                          <a href="#" class="card-button">Más Info</a>
+                        </div>
+                      </article>
+
+                      <article class="card-article swiper-slide">
+                        <div class="card-image">
+                            <img src="assets/imgs/product7.png" alt="image" class="card-img">
+                            <div class="card-shadow"></div>
+                        </div>
+                        <div class="card-body">
+                          <h2 class="card-name">Melón</h2>
+                          <p class="card-price">5,20 <span class="card-span">€/kg</span></p>
+            
+                          <a href="#" class="card-button">Más Info</a>
+                        </div>
+                      </article>
+
+                      <article class="card-article swiper-slide">
+                        <div class="card-image">
+                            <img src="assets/imgs/product10.png" alt="image" class="card-img">
+                            <div class="card-shadow"></div>
+                        </div>
+                        <div class="card-body">
+                          <h2 class="card-name">Arándano</h2>
+                          <p class="card-price">4,80 <span class="card-span">€/kg</span></p>
+            
+                          <a href="#" class="card-button">Más Info</a>
+                        </div>
+                      </article>
+
+                      <article class="card-article swiper-slide">
+                        <div class="card-image">
+                            <img src="assets/imgs/product8.png" alt="image" class="card-img">
+                            <div class="card-shadow"></div>
+                        </div>
+                        <div class="card-body">
+                          <h2 class="card-name">Plátano</h2>
+                          <p class="card-price">2,80 <span class="card-span">€/kg</span></p>
+            
+                          <a href="#" class="card-button">Más Info</a>
+                        </div>
+                      </article>
+
+                </div>
+            </div>
+
     </section>
 
     <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
