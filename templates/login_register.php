@@ -67,7 +67,7 @@ $conn = conectarDB();
             $name = mysqli_real_escape_string($conn, $name);
             $password = mysqli_real_escape_string($conn, $password);
 
-            $query = "SELECT id, username, email, password FROM usuarios WHERE username = '$name' AND email = '$email'";
+            $query = "SELECT id, username, email, rol , password FROM usuarios WHERE username = '$name' AND email = '$email'";
             $result = mysqli_query($conn, $query);
 
             if (!$result) {
@@ -78,7 +78,7 @@ $conn = conectarDB();
                 $row = mysqli_fetch_assoc($result);
 
                 if (password_verify($password, $row['password'])) {
-                    if ($row['id'] == 1) {
+                    if ($row['rol'] == 1) {
                         die(header("Location:../admin/index.php"));
                     } else {
                         die(header("Location:cliente_index.php"));

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frutería La Quinta Fila</title>
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -174,55 +175,139 @@
       </article>
     </div>
 
-    <!--Carrusel imágenes-->
-    <section class="wrap-2">
-      <h1>Productos mas vendidos</h1>
-      <div class="carousel">
-        <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
-        <div id="images" class="image-container"></div>
-        <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
-      </div>
-      <div class="controls">
-        <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
-        <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
-      </div>
-    </section>
+    <!--Slider de artículos más vendidos-->
+    <section class="container">
+      <div class="card-container swiper">
+        <div class="card-content">
+          <div class="swiper-wrapper">
+            <article class="card-article swiper-slide">
+              <div class="card-image">
+                <img src="assets/imgs/product.png" alt="image" class="card-img">
+                <div class="card-shadow"></div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-name">Fresa</h2>
+                <p class="card-price">8,90 <span class="card-span">€/kg</span></p>
 
-    <footer>
-      <div class="info-1">
-        <div>
-          <h3>Atención al cliente</h3>
-          <p>Preguntas Frecuentes</p>
-          <p>hola@contacto.es</p>
-          <p>985555555</p>
-        </div>
-        <div>
-          <h3>Conócenos</h3>
-          <p>Quiénes somos</p>
-          <p>Encuéntranos</p>
-          <p>Recetas</p>
-          <p>Trabaja con nosotros</p>
-        </div>
-        <div class="sm-container">
-          <h3>Síguenos</h3>
-          <p class="sm-icons">
-            <i class="fa-brands fa-instagram fa-2xl" style="color: #fafafa;"></i>
-            <i class="fa-brands fa-x-twitter fa-2xl" style="color: #fafafa;"></i>
-            <i class="fa-brands fa-youtube fa-2xl" style="color: #fafafa;"></i>
-          </p>
-        </div>
-      </div>
-      <div class="info-2">
-        <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
-      </div>
-    </footer>
+                <a href="#" class="card-button">Más Info</a>
+              </div>
+            </article>
 
-    <button id="elevator" class="elevator">
-      <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
-    </button>
+            <article class="card-article swiper-slide">
+              <div class="card-image">
+                <img src="assets/imgs/product5.png" alt="image" class="card-img">
+                <div class="card-shadow"></div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-name">Manzana</h2>
+                <p class="card-price">2,90 <span class="card-span">€/kg</span></p>
 
-    <script src="./scripts/main.js"></script>
-    <script src="http//tholman.com/elevator.js/elevator.js"></script>
+                <a href="#" class="card-button">Más Info</a>
+              </div>
+            </article>
+
+            <article class="card-article swiper-slide">
+              <div class="card-image">
+                <img src="assets/imgs/product7.png" alt="image" class="card-img">
+                <div class="card-shadow"></div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-name">Melón</h2>
+                <p class="card-price">5,20 <span class="card-span">€/kg</span></p>
+
+                <a href="#" class="card-button">Más Info</a>
+              </div>
+            </article>
+
+            <article class="card-article swiper-slide">
+              <div class="card-image">
+                <img src="assets/imgs/product10.png" alt="image" class="card-img">
+                <div class="card-shadow"></div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-name">Arándano</h2>
+                <p class="card-price">4,80 <span class="card-span">€/kg</span></p>
+
+                <a href="#" class="card-button">Más Info</a>
+              </div>
+            </article>
+
+            <article class="card-article swiper-slide">
+              <div class="card-image">
+                <img src="assets/imgs/product8.png" alt="image" class="card-img">
+                <div class="card-shadow"></div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-name">Plátano</h2>
+                <p class="card-price">2,80 <span class="card-span">€/kg</span></p>
+
+                <a href="#" class="card-button">Más Info</a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <img src="assets/imgs/arrow-left-s-line.svg" alt="arrowl">
+        </div>
+        <div class="swiper-button-next">
+          <img src="assets/imgs/arrow-right-s-line.svg" alt="arrowr">
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!--Carrusel imágenes-->
+      <section class="wrap-2">
+        <h1>Productos mas vendidos</h1>
+        <div class="carousel">
+          <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
+          <div id="images" class="image-container"></div>
+          <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
+        </div>
+        <div class="controls">
+          <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
+          <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
+        </div>
+      </section>
+
+      <footer>
+        <div class="info-1">
+          <div>
+            <h3>Atención al cliente</h3>
+            <p>Preguntas Frecuentes</p>
+            <p>hola@contacto.es</p>
+            <p>985555555</p>
+          </div>
+          <div>
+            <h3>Conócenos</h3>
+            <p>Quiénes somos</p>
+            <p>Encuéntranos</p>
+            <p>Recetas</p>
+            <p>Trabaja con nosotros</p>
+          </div>
+          <div class="sm-container">
+            <h3>Síguenos</h3>
+            <p class="sm-icons">
+              <i class="fa-brands fa-instagram fa-2xl" style="color: #fafafa;"></i>
+              <i class="fa-brands fa-x-twitter fa-2xl" style="color: #fafafa;"></i>
+              <i class="fa-brands fa-youtube fa-2xl" style="color: #fafafa;"></i>
+            </p>
+          </div>
+        </div>
+        <div class="info-2">
+          <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
+        </div>
+      </footer>
+
+      <button id="elevator" class="elevator">
+        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
+      </button>
+
+      <button id="elevator" class="elevator">
+        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
+      </button>
+
+      <script src="./scripts/swiper-bundle.min.js"></script>
+      <script src="./scripts/main.js"></script>
+      <script src="http//tholman.com/elevator.js/elevator.js"></script>
 </body>
 
 </html>
