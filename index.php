@@ -173,17 +173,9 @@
       </article>
     </div>
 
-    <!--Carrusel_imágenes-->
-    <section>
-      <div class="carousel">
-        <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
-        <div id="images" class="image-container"></div>
-        <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
-      </div>
-      <div class="controls">
-        <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
-        <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
-      </div>
+    <!--Carrusel imágenes-->
+    <section class="container">
+
     </section>
 
     <button id="elevator" class="elevator"><i class="fa-solid fa-arrow-up fa-xl" style="color: #6f7276;"></i></button>
