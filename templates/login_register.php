@@ -64,18 +64,18 @@ $conn = conectarDB();
             $name = mysqli_real_escape_string($conn, $name);
             $password = mysqli_real_escape_string($conn, $password);
 
-            $query = "SELECT id, username, email, password FROM usuarios WHERE username = '$name' AND email = '$email'";
+            $query = "SELECT id, username, email, rol , password FROM usuarios WHERE username = '$name' AND email = '$email'";
             $result = mysqli_query($conn, $query);
-            
+
             if (!$result) {
                 die("Error en la consulta: " . mysqli_error($conn));
             }
             // usuarios password tiene que ser 255
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
-            
+
                 if (password_verify($password, $row['password'])) {
-                    if ($row['id'] == 1) {
+                    if ($row['rol'] == 1) {
                         die(header("Location:../admin/index.php"));
                     } else {
                         die(header("Location:cliente_index.php"));
@@ -86,7 +86,7 @@ $conn = conectarDB();
             } else {
                 echo '<p class="error">Credenciales incorrectas</p>';
             }
-            
+
         } elseif (isset($_POST['register'])) {
             $name = trim($_POST["newUsername"]);
             $email = $_POST['newEmail'];
