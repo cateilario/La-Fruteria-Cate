@@ -173,7 +173,7 @@
       </article>
     </div>
 
-    <!--Slider productos-->
+    <!--Slider artículos más vendidos-->
     <section class="container">
         <div class="card-container swiper">
             <div class="card-content">
