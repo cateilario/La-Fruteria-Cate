@@ -7,6 +7,7 @@
   <title>Frutería La Quinta Fila</title>
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>

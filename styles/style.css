@@ -416,52 +416,7 @@ nav li:hover {
   justify-content: center;
 }
 
-/*Carrusel imágenes*/
-.carousel {
-  max-width: 50%;
-  height: 50vh;
-  margin: 30px auto;
-  position: relative;
-}
-
-.image-container{
-  width: 50%;
-  height: 40vh;
-  margin: 0 auto;
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background-color: #f1f2f3;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-#forward {
-  right: 0;
-}
-
-#backward {
-  left: 0;
-}
-
-.controls{
-  justify-content: center;
-  display: flex;
-}
-
-.controls button {
-  border-radius: 4px;
-  border: none;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-}
+/* Elevator */
 
 .elevator{
   border:none;
