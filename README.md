@@ -4,7 +4,7 @@
 
 **Project Manager**: Kike
 
-**HTML-Templates**: Alejandro
+**HTML-JavaScript**: Alejandro
 
 **CSS**: Caterina
 
