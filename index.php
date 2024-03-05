@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frutería La Quinta Fila</title>
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -174,7 +174,7 @@
       </article>
     </div>
 
-    <!--Slider artículos más vendidos-->
+    <!--Slider de artículos más vendidos-->
     <section class="container">
         <div class="card-container swiper">
             <div class="card-content">
@@ -243,7 +243,6 @@
                           <a href="#" class="card-button">Más Info</a>
                         </div>
                       </article>
-
                 </div>
             </div>
             <div class="swiper-button-prev">

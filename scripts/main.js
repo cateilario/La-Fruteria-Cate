@@ -361,30 +361,33 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function()
 });
 
 // Lógica correspondiente al slider de artículos más vendidos
-let swiperCards = new Swiper('.card-content', {
+let swiperCards; // Declarar la variable en un alcance superior
 
-  loop: true,
-  spaceBetween: 30,
-  grabCursor: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-      600: {
-          slidesPerView: 2,
+document.addEventListener('DOMContentLoaded', function() {
+    swiperCards = new Swiper('.card-content', {
+      loop: true,
+      spaceBetween: 30,
+      grabCursor: true,
+    
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
       },
-      968: {
-          slidesPerView: 3,
+    
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-  }
-
+    
+      breakpoints: {
+          600: {
+              slidesPerView: 2,
+          },
+          968: {
+              slidesPerView: 3,
+          },
+        }
+    });
 });
+
