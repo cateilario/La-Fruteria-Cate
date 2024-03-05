@@ -175,6 +175,21 @@
 
     <!--Carrusel imágenes-->
     <section class="container">
+        <div class="card-container swiper">
+            <div class="card-content">
+                <div class="swiper-wrapper">
+                    <article class="card-article swiper-slide">
+                        <div class="card-image">
+                            <img src="assets/imgs/product.png" alt="image" class="card-img">
+                            <div class="card-shadow"></div>
+                        </div>
+                        <div class="card-body">
+                          <h2 class="card-name">Fresa</h2>
+                          <p class="card-price">8,90 <span class="card-span">€/kg</span></p>
+            
+                          <a href="#" class="card-button">Más Info</a>
+                        </div>
+                      </article>
 
     </section>
 
