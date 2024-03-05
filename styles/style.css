@@ -496,3 +496,26 @@ body.dark-mode {
 }
 
 /* Slider */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.card-container{
+  padding-block: 5rem;
+}
+
+.card-content{
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card-article{
+  width: 300px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
