@@ -42,6 +42,7 @@ CREATE TABLE `order_details` (
 
 LOCK TABLES `order_details` WRITE;
 /*!40000 ALTER TABLE `order_details` DISABLE KEYS */;
+INSERT INTO `order_details` VALUES (1,0.40,1,4),(1,0.40,1,5),(2,1.60,2,5),(2,0.60,3,5);
 /*!40000 ALTER TABLE `order_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +62,7 @@ CREATE TABLE `pedidos` (
   PRIMARY KEY (`id`),
   KEY `fk_pedidos_usuarios1_idx` (`usuarios_id`),
   CONSTRAINT `fk_pedidos_usuarios1` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +71,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,6,'1',10.00,NULL);
+INSERT INTO `pedidos` VALUES (1,6,'1',10.00,NULL),(2,1,'1',1.00,'2024-03-06'),(3,1,'1',1.00,'2024-03-06'),(4,1,NULL,0.40,'2024-03-06'),(5,1,NULL,2.60,'2024-03-06');
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +86,7 @@ CREATE TABLE `stock` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
   `cantidad` varchar(45) NOT NULL,
-  `precio` varchar(45) NOT NULL,
+  `precio` decimal(10,2) NOT NULL,
   `categoria` varchar(45) NOT NULL,
   `imagen` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -98,7 +99,7 @@ CREATE TABLE `stock` (
 
 LOCK TABLES `stock` WRITE;
 /*!40000 ALTER TABLE `stock` DISABLE KEYS */;
-INSERT INTO `stock` VALUES (1,'Pera','100','0,40','fruta',NULL),(2,'Lechuga','40','0,80','verdura',NULL),(3,'Tomate','60','0,30','fruta',NULL),(4,'Pepino','20','0,45','verdura',NULL),(5,'Manzana','150','0,37','fruta',NULL);
+INSERT INTO `stock` VALUES (1,'Pera','100',0.40,'fruta',NULL),(2,'Lechuga','40',0.80,'verdura',NULL),(3,'Tomate','60',0.30,'fruta',NULL),(4,'Pepino','20',0.45,'verdura',NULL),(5,'Manzana','150',0.37,'fruta',NULL);
 /*!40000 ALTER TABLE `stock` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-06 11:49:44
+-- Dump completed on 2024-03-06 12:59:28
