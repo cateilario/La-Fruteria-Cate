@@ -20,6 +20,9 @@ USE fruteria;
 --
 -- Table structure for table `order_details`
 --
+CREATE DATABASE IF NOT EXISTS fruteria;
+
+USE fruteria;
 
 DROP TABLE IF EXISTS `order_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

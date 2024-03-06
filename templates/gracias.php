@@ -3,9 +3,14 @@ require "../includes/config/database.php";
 
 $conn = conectarDB();
 
+session_start();
+if (!isset($_SESSION['id'])) {
+    header("Location: login_register.php");
+    exit();
+} else {
+    $user_id = $_SESSION['id'];
+}
 
-// Retrieve user ID from session or wherever it's stored
-$user_id = 1; // Example
 
 // Retrieve the last order made by the user
 $query = "SELECT * FROM pedidos WHERE usuarios_id = $user_id ORDER BY id DESC LIMIT 1";
@@ -48,5 +53,6 @@ $order_details_result = mysqli_query($conn, $order_details_query);
             </tr>
         <?php } ?>
     </table>
+    <button onclick="window.location.href = '../index.php'">Volver a la tienda</button>
 </body>
 </html>
