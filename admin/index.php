@@ -9,6 +9,13 @@ require 'funciones/crear.php';
 $conn = conectarDB();
 
 // var_dump($db);
+session_start();
+    if (!isset($_SESSION['id'])) {
+        header("Location: login_register.php");
+        exit();
+    }else{
+        $user_id = $_SESSION['id'];
+    }
 
 $query = "SELECT * FROM stock";
 $queryPedidos = "SELECT p.id, u.username AS user_name, CONCAT(s.nombre, ' (', od.quantity, ')') AS detalle_pedido, p.total, p.order_date
@@ -30,7 +37,7 @@ $join = mysqli_query($conn,$queryPedidos);
 </head>
 
 <body>
-    <h1>Holaaaa Kikeee</h1>
+    <h1>Hola <?php echo $_SESSION['username'] ?></h1>
     <a href="../index.php">Exit</a>
 
     <form action="#" method="post" enctype="multipart/form-data">

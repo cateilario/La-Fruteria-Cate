@@ -11,6 +11,13 @@ if (!isset($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
 }
 
+// Cerrrar session
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: ../index.php");
+    exit();
+}
+
 
 // Retrieve the last order made by the user
 $query = "SELECT * FROM pedidos WHERE usuarios_id = $user_id ORDER BY id DESC LIMIT 1";
@@ -53,6 +60,6 @@ $order_details_result = mysqli_query($conn, $order_details_query);
             </tr>
         <?php } ?>
     </table>
-    <button onclick="window.location.href = '../index.php'">Volver a la tienda</button>
+    <a href="?logout=true">Volver a la tienda</a>
 </body>
 </html>
