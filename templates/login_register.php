@@ -75,10 +75,17 @@ $conn = conectarDB();
                 $row = mysqli_fetch_assoc($result);
 
                 if (password_verify($password, $row['password'])) {
-                    if ($row['rol'] == 1) {
-                        die(header("Location:../admin/index.php"));
-                    } else {
-                        die(header("Location:cliente_index.php"));
+                    session_start();
+                    $_SESSION['username'] = $row['username'];
+                    $_SESSION['rol'] = $row['rol'];
+                    $_SESSION['id'] = $row['id'];
+                    switch ($row['rol']) {
+                        case 1:
+                            header("Location:../admin/index.php");
+                            exit;
+                        default:
+                            header("Location:cliente_index.php");
+                            exit;
                     }
                 } else {
                     echo '<p class="error">Credenciales incorrectas</p>';
@@ -86,6 +93,7 @@ $conn = conectarDB();
             } else {
                 echo '<p class="error">Credenciales incorrectas</p>';
             }
+        
 
         } elseif (isset($_POST['register'])) {
             $name = trim($_POST["newUsername"]);

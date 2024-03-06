@@ -19,23 +19,15 @@ $result = mysqli_query($conn, $query);
 <body>
     <h2>Productos</h2>
     <form action="pedido.php" method="post">
-        <table>
-            <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-            </tr>
-            <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                <tr>
-                    <td><?php echo $row['imagen'] ?></td>
-                    <td><?php echo $row['nombre']; ?></td>
-                    <td><?php echo $row['precio']; ?></td>
-                    <td><input type="number" name="quantity[<?php echo $row['id']; ?>]" value="0" min="0"></td>
-                </tr>
-            <?php } ?>
-        </table>
-        <input type="submit" value="Place Order">
-    </form>
+        <?php foreach($result as $product): ?>
+            <div class="item-card">
+                <?php echo "<img src='../images/{$product['imagen']}' alt='{$product['nombre']}'>"; ?>
+                <h3><?php echo $product['nombre'] ?></h3>
+                <p><?php echo $product['precio'] ?></p>
+                <input type="number" name="quantity[<?php echo $product['id']; ?>]" value="0" min="0">
+            </div>
+            <?php endforeach; ?>
+            <input type="submit" value="Hacer Pedido">
+        </form>
 </body>
 </html>
