@@ -11,7 +11,13 @@ $conn = conectarDB();
 // var_dump($db);
 
 $query = "SELECT * FROM stock";
+$queryPedidos = "SELECT p.id, u.username AS user_name, CONCAT(s.nombre, ' (', od.quantity, ')') AS detalle_pedido, p.total, p.order_date
+FROM pedidos p
+JOIN usuarios u ON p.usuarios_id = u.id
+JOIN order_details od ON p.id = od.pedidos_id
+JOIN stock s ON od.stock_id = s.id";
 $result = mysqli_query($conn, $query);
+$join = mysqli_query($conn,$queryPedidos);
 ?>
 
 <!DOCTYPE html>
@@ -111,6 +117,37 @@ $result = mysqli_query($conn, $query);
                 </td>
             </tr>
         <?php endforeach; ?>
+    </table>
+    <table border="1px solid black">
+        <tr>
+            <th>Id pedido</th>
+            <th>Nombre de usuario</th>
+            <th>ID detalle pedido</th>
+            <th>Total</th>
+            <th>Fecha</th>
+        </tr>
+        <?php while ($row = mysqli_fetch_assoc($join)): ?>
+            <tr>
+                <td>
+                    <?php echo $row['id']; ?>
+                </td>
+                <td>
+                    <?php echo $row['user_name']; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['detalle_pedido']; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['total'] . " €"; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['order_date']; ?>
+                </td>
+            </tr>
+        <?php endwhile ?>
     </table>
 </body>
 
