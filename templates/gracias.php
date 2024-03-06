@@ -29,23 +29,22 @@ $order_details_result = mysqli_query($conn, $order_details_query);
     <title>Thank You</title>
 </head>
 <body>
-    <h2>Thank You for Your Order!</h2>
-    <h3>Order Summary</h3>
-    <p><strong>Order ID:</strong> <?php echo $order['id']; ?></p>
-    <p><strong>Order Date:</strong> <?php echo $order['order_date']; ?></p>
-    <p><strong>Total Amount:</strong> $<?php echo number_format($order['total'], 2); ?></p>
-    <h4>Order Details:</h4>
+    <h2>Gracias por tú pedido!</h2>
+    <h3>Resumen</h3>
+    <p><strong>Fecha Pedido:</strong> <?php echo $order['order_date']; ?></p>
+    <p><strong>Total :</strong> $<?php echo number_format($order['total'], 2); ?></p>
+    <h4>Detalles:</h4>
     <table>
         <tr>
-            <th>Product Name</th>
-            <th>Quantity</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
             <th>Total</th>
         </tr>
         <?php while($row = mysqli_fetch_assoc($order_details_result)) { ?>
             <tr>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['quantity']; ?></td>
-                <td>$<?php echo number_format($row['total'], 2); ?></td>
+                <td><?php echo number_format($row['total'], 2); ?>$</td>
             </tr>
         <?php } ?>
     </table>
