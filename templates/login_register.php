@@ -20,7 +20,7 @@ $conn = conectarDB();
 </head>
 
 <body class="log-in">
-    <form id="loginForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form class="log-form" id="loginForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h2>Inicio sesión</h2>
         <label for="username">Nombre usuario:</label>
         <input type="text" name="username">
@@ -35,7 +35,7 @@ $conn = conectarDB();
     </form>
 
     <!-- Registration form -->
-    <form id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" style="display:none;">
+    <form class="log-form" id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" style="display:none;">
         <h2>Registrarse</h2>
         <label for="newUsername">Nombre usuario:</label>
         <input type="text" name="newUsername" placeholder="User name">

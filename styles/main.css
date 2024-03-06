@@ -76,6 +76,28 @@ a:link, a:visited, a:active {
   text-decoration: none;
 }
 
+/* Dark Mode */
+body.dark-mode {
+  background-color: #000;
+  color: #ffffff;
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#dark-mode-toggle img {
+  width: 50px;
+  height: 50px;
+}
+
 .wrap-1 {
   position: relative;
 }
@@ -164,39 +186,40 @@ a:link, a:visited, a:active {
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
 }
-.products-grid article {
+
+.card {
   border: 0.5px solid #c9c9c9;
   border-radius: 6px;
   box-shadow: 0 5px 8px #7c7979;
   transition: all 0.3s ease-out;
 }
-.products-grid article:hover {
+.card:hover {
   transform: translateY(-5px);
   border: 1px solid #355641;
 }
-.products-grid article img {
+.card img {
   width: 100%;
   object-fit: contain;
   aspect-ratio: 1/1;
 }
-.products-grid article .card-body {
+.card .card-body {
   padding: 0 1rem;
 }
-.products-grid article .card-body h2 {
+.card .card-body h2 {
   font-size: 1rem;
 }
-.products-grid article .card-body p {
+.card .card-body p {
   font-size: 1rem;
 }
-.products-grid article .card-body p span {
+.card .card-body p span {
   font-size: 0.7rem;
 }
-.products-grid article .card-footer {
+.card .card-footer {
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
-.products-grid article .card-footer button {
+.card .card-footer button {
   border: 0;
   border-radius: 4px;
   width: 100%;
@@ -206,10 +229,66 @@ a:link, a:visited, a:active {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.products-grid article .card-footer button:hover {
+.card .card-footer button:hover {
   background-color: #598356;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: rgb(148, 140, 140);
+  /* display: none; */
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(113, 104, 104);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(173, 215, 48);
+}
+
+@media screen and (min-width: 320px) {
+  .card-body {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-content {
+    margin-inline: 3rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .card-container {
+    max-width: 1120px;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+  .swiper-button-prev {
+    left: -1rem;
+  }
+}
 footer {
   width: 100%;
   margin-bottom: -5rem;
@@ -270,8 +349,9 @@ html .log-in {
   justify-content: center;
   align-items: center;
 }
-html .log-in form {
+html .log-in .log-form {
   position: relative;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,32 +359,33 @@ html .log-in form {
   gap: 0.6rem;
   border: none;
   border-radius: 6px;
-  background-color: transparent;
+  background-color: rgba(214, 213, 213, 0.797);
+  opacity: 0.9;
   -webkit-box-shadow: -1px 2px 10px 3px rgb(189, 189, 189);
   -moz-box-shadow: -1px 2px 10px 3px rgb(189, 189, 189);
   box-shadow: -1px 2px 10px 3px rgb(189, 189, 189);
   width: 40%;
   padding: 1.5rem;
 }
-html .log-in form h2 {
+html .log-in .log-form h2 {
   text-transform: uppercase;
 }
-html .log-in form label {
+html .log-in .log-form label {
   text-align: left;
 }
-html .log-in form input {
+html .log-in .log-form input {
   padding: 0.5rem;
   width: 50%;
   border-radius: 6px;
   border: none;
 }
-html .log-in form .form-btns {
+html .log-in .log-form .form-btns {
   display: flex;
   align-items: center;
   margin-top: 2.5rem;
   gap: 3rem;
 }
-html .log-in form .form-btns button {
+html .log-in .log-form .form-btns button {
   border: 0;
   border-radius: 6px;
   background-color: rgb(157, 157, 157);
@@ -314,7 +395,7 @@ html .log-in form .form-btns button {
   text-transform: uppercase;
   font-weight: 600;
 }
-html .log-in form .form-btns button:hover {
+html .log-in .log-form .form-btns button:hover {
   background-color: rgba(182, 182, 182, 0.827);
 }
 
