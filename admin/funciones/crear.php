@@ -35,7 +35,7 @@ try {
             $errores[] = 'El campo Categoría es obligatorio.';
         }
 
-        $medida = 1000 * 100;
+        $medida = 1000 * 500;
 
         if ($imagen && $imagen['error'] != UPLOAD_ERR_OK) {
             $errores[] = 'Error al subir imagen.';
