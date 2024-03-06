@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: gracias.php");
     exit();
 }
-?>
+
 
 
 
