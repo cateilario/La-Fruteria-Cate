@@ -11,7 +11,10 @@ $conn = conectarDB();
 // var_dump($db);
 
 $query = "SELECT * FROM stock";
+$query2 = "SELECT * FROM pedidos";
 $result = mysqli_query($conn, $query);
+$result2 = mysqli_query($conn, $query2);
+
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +110,39 @@ $result = mysqli_query($conn, $query);
                     <?php echo $fruta['categoria']; ?>
                 </td>
                 <td>
-                <?php echo "<img src='../images/{$fruta['imagen']}'></img>"; ?>
+                    <?php echo "<img src='../images/{$fruta['imagen']}'></img>"; ?>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+
+    <table border="1px solid black">
+        <tr>
+            <th>Id pedido</th>
+            <th>Nombre de usuario</th>
+            <th>ID detalle pedido</th>
+            <th>Total</th>
+            <th>Fecha</th>
+        </tr>
+        <?php foreach ($result2 as $pedido): ?>
+            <tr>
+                <td>
+                    <?php echo $pedido['id']; ?>
+                </td>
+                <td>
+                    <?php echo $pedido['usuarios_id']; ?>
+                </td>
+
+                <td>
+                    <?php echo $pedido['detalle_pedido']; ?>
+                </td>
+
+                <td>
+                    <?php echo $pedido['total'] . " €"; ?>
+                </td>
+
+                <td>
+                    <?php echo $pedido['order_date']; ?>
                 </td>
             </tr>
         <?php endforeach; ?>
