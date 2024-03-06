@@ -12,8 +12,14 @@ $conn = conectarDB();
 
 $query = "SELECT * FROM stock";
 $query2 = "SELECT * FROM pedidos";
+$query3 = "SELECT p.id, u.username AS user_name, CONCAT(s.nombre, ' (', od.quantity, ')') AS detalle_pedido, p.total, p.order_date
+FROM pedidos p
+JOIN usuarios u ON p.usuarios_id = u.id
+JOIN order_details od ON p.id = od.pedidos_id
+JOIN stock s ON od.stock_id = s.id";
 $result = mysqli_query($conn, $query);
 $result2 = mysqli_query($conn, $query2);
+$result3 = mysqli_query($conn, $query3);
 
 ?>
 
@@ -113,7 +119,7 @@ $result2 = mysqli_query($conn, $query2);
                     <?php echo "<img src='../images/{$fruta['imagen']}'></img>"; ?>
                 </td>
             </tr>
-        <?php endforeach; ?>
+        <?php endforeach ?>
     </table>
 
     <table border="1px solid black">
@@ -145,7 +151,38 @@ $result2 = mysqli_query($conn, $query2);
                     <?php echo $pedido['order_date']; ?>
                 </td>
             </tr>
-        <?php endforeach; ?>
+        <?php endforeach ?>
+    </table>
+    <table border="1px solid black">
+        <tr>
+            <th>Id pedido</th>
+            <th>Nombre de usuario</th>
+            <th>ID detalle pedido</th>
+            <th>Total</th>
+            <th>Fecha</th>
+        </tr>
+        <?php while ($row = mysqli_fetch_assoc($result3)): ?>
+            <tr>
+                <td>
+                    <?php echo $row['id']; ?>
+                </td>
+                <td>
+                    <?php echo $row['user_name']; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['detalle_pedido']; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['total'] . " €"; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['order_date']; ?>
+                </td>
+            </tr>
+        <?php endwhile ?>
     </table>
 </body>
 
