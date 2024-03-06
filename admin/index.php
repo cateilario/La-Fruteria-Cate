@@ -9,6 +9,26 @@ require 'funciones/crear.php';
 $conn = conectarDB();
 
 // var_dump($db);
+session_start();
+
+if (!isset($_SESSION['id']) && !isset($_SESSION['rol'])) {
+    // Your code here
+    header("Location: ../index.php");
+    exit();
+}
+elseif($_SESSION['rol'] !== 1){
+    header("Location: ../index.php");
+    exit();
+}else{
+    $user_id = $_SESSION['id'];
+}
+
+// Cerrrar session
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: ../index.php");
+    exit();
+}
 
 $query = "SELECT * FROM stock";
 $queryPedidos = "SELECT p.id, u.username AS user_name, CONCAT(s.nombre, ' (', od.quantity, ')') AS detalle_pedido, p.total, p.order_date
@@ -30,8 +50,8 @@ $join = mysqli_query($conn,$queryPedidos);
 </head>
 
 <body>
-    <h1>Holaaaa Kikeee</h1>
-    <a href="../index.php">Exit</a>
+    <h1>Hola <?php echo $_SESSION['username'] ?></h1>
+    <a href="?logout=true">Exit</a>
 
     <form action="#" method="post" enctype="multipart/form-data">
         <fieldset>
