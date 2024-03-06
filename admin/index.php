@@ -16,11 +16,11 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['rol'])) {
     header("Location: ../index.php");
     exit();
 }
-elseif($_SESSION['rol'] !== 1){
-    header("Location: ../index.php");
-    exit();
-}else{
+elseif($_SESSION['rol'] == 1){
+    
     $user_id = $_SESSION['id'];
+}else{
+    header("Location: ../index.php");
 }
 
 // Cerrrar session
