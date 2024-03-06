@@ -18,6 +18,7 @@
 --
 -- Table structure for table `order_details`
 --
+CREATE DATABASE IF NOT EXISTS fruteria;
 
 USE fruteria;
 
