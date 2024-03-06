@@ -64,27 +64,29 @@ $conn = conectarDB();
             $name = mysqli_real_escape_string($conn, $name);
             $password = mysqli_real_escape_string($conn, $password);
 
-            $query = "SELECT * FROM usuarios WHERE username = '$name' AND email = '$email' AND password = '$password'";
+            $query = "SELECT id, username, email, password FROM usuarios WHERE username = '$name' AND email = '$email'";
             $result = mysqli_query($conn, $query);
-
+            
             if (!$result) {
                 die("Error en la consulta: " . mysqli_error($conn));
             }
-
+            // usuarios password tiene que ser 255
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
-
-                if ($row['id'] == 1) {
-                    die(header("Location:../admin/index.php"));
-
+            
+                if (password_verify($password, $row['password'])) {
+                    if ($row['id'] == 1) {
+                        die(header("Location:../admin/index.php"));
+                    } else {
+                        die(header("Location:cliente_index.php"));
+                    }
                 } else {
-                    die(header("Location:cliente_index.php"));
-
+                    echo '<p class="error">Credenciales incorrectas</p>';
                 }
             } else {
                 echo '<p class="error">Credenciales incorrectas</p>';
-
             }
+            
         } elseif (isset($_POST['register'])) {
             $name = trim($_POST["newUsername"]);
             $email = $_POST['newEmail'];
@@ -93,15 +95,17 @@ $conn = conectarDB();
             $name = mysqli_real_escape_string($conn, $name);
             $password = mysqli_real_escape_string($conn, $password);
 
-            $query = "INSERT INTO usuarios (username, email,password) VALUES ('$name','$email','$password')";
-            $result = mysqli_query($conn,$query);
+            $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = "INSERT INTO usuarios (username, email,password) VALUES ('$name','$email','$hashPassword')";
+            $result = mysqli_query($conn, $query);
 
             if (!$result) {
                 die("Error en la consulta: " . mysqli_error($conn));
             } else {
                 echo '<p class="success">Registro exitoso. Puede iniciar sesión ahora.</p>';
             }
-        
+
         }
 
     } catch (Exception $e) {

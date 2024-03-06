@@ -6,6 +6,6 @@
 
 **HTML-Templates**: Alejandro
 
-**JavaScript**: Caterina
+**CSS**: Caterina
 
 **BackEnd**: Nacho Carmona Gonzalez

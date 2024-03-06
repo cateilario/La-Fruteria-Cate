@@ -31,7 +31,7 @@ CREATE TABLE `stock` (
   `precio` varchar(45) NOT NULL,
   `categoria` varchar(45) NOT NULL,
   `imagen` varchar(255) NOT NULL,
-  `usuarios_id` int NOT NULL,
+  `usuarios_id` int NULL,
   PRIMARY KEY (`id`),
   KEY `fk_stock_usuarios_idx` (`usuarios_id`),
   CONSTRAINT `fk_stock_usuarios` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`)
@@ -58,7 +58,7 @@ CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -83,5 +83,5 @@ UNLOCK TABLES;
 
 -- Dump completed on 2024-02-16  9:39:17
 
-INSERT INTO usuarios (id,username, email, password) 
-VALUES (1,"admin", "admin@admin.com", 1234);
+/*INSERT INTO usuarios (id,username, email, password) 
+VALUES (1,"admin", "admin@admin.com", 1234); */

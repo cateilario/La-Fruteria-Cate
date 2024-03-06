@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    
 <?php include 'Components/itemcard.php'?>
     
 </body>

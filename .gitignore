@@ -1,5 +1,8 @@
 .DStore
 .DS_Store
+node_modules/
+package-lock.json
+package.json
 includes/config/database.php
 includes/config/Dump20240216 1.sql
 .vscode
