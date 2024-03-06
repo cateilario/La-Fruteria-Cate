@@ -11,13 +11,16 @@ $conn = conectarDB();
 // var_dump($db);
 session_start();
 
-if (!isset($_SESSION['id']) && !isset($_SESSION['rol']) && $_SESSION['rol'] != 1) {
+if (!isset($_SESSION['id']) && !isset($_SESSION['rol'])) {
     // Your code here
     header("Location: ../index.php");
     exit();
 }
-else{
-        $user_id = $_SESSION['id'];
+elseif($_SESSION['rol'] !== 1){
+    header("Location: ../index.php");
+    exit();
+}else{
+    $user_id = $_SESSION['id'];
 }
 
 // Cerrrar session
