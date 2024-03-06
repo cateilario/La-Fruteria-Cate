@@ -16,102 +16,106 @@ $result = mysqli_query($conn, $query);
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Crud</title>
+    <link rel="stylesheet" href=".././styles/main.css">
+    <title>Zona Administrador</title>
 </head>
 
 <body>
-    <h1>Holaaaa Kikeee</h1>
-    <a href="../index.php">Exit</a>
+    <main class="wrap-2 container">
+        <h1>Panel Administracion</h1>
 
-    <form action="#" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <legend>Crear</legend>
-            <label for="create_nombre">Nombre</label>
-            <input type="text" name="create_nombre" id="create_nombre">
+        <section class="admin-actions">
+        <a href="../index.php" class="exit-btn">Exit</a>
+        
+        <form action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Crear</legend>
+                <label for="create_nombre">Nombre</label>
+                <input type="text" name="create_nombre" id="create_nombre">
 
-            <label for="create_cantidad">Cantidad</label>
-            <input type="text" name="create_cantidad" id="create_cantidad">
+                <label for="create_cantidad">Cantidad</label>
+                <input type="text" name="create_cantidad" id="create_cantidad">
 
-            <label for="create_precio">Precio</label>
-            <input type="text" name="create_precio" id="create_precio">
+                <label for="create_precio">Precio</label>
+                <input type="text" name="create_precio" id="create_precio">
 
-            <label for="create_categoria">Categoria</label>
-            <input type="text" name="create_categoria" id="create_categoria">
+                <label for="create_categoria">Categoria</label>
+                <input type="text" name="create_categoria" id="create_categoria">
 
-            <label for="create_imagen">Imagen</label>
-            <input type="file" name="create_imagen" id="create_imagen">
+                <label for="create_imagen">Imagen</label>
+                <input type="file" name="create_imagen" id="create_imagen">
 
-            <button type="submit" name="insert">Insertar</button>
+                <button type="submit" name="insert" class="action-btns" >Insertar</button>
 
-        </fieldset>
+            </fieldset>
 
-        <fieldset>
-            <legend>Actualizar</legend>
-            <label for="update_id">ID</label>
-            <input type="text" name="update_id" id="update_id">
+            <fieldset>
+                <legend>Actualizar</legend>
+                <label for="update_id">ID</label>
+                <input type="text" name="update_id" id="update_id">
 
-            <label for="update_nombre">Nombre</label>
-            <input type="text" name="update_nombre" id="update_nombre">
+                <label for="update_nombre">Nombre</label>
+                <input type="text" name="update_nombre" id="update_nombre">
 
-            <label for="update_cantidad">Cantidad</label>
-            <input type="text" name="update_cantidad" id="update_cantidad">
+                <label for="update_cantidad">Cantidad</label>
+                <input type="text" name="update_cantidad" id="update_cantidad">
 
-            <label for="update_precio">Precio</label>
-            <input type="text" name="update_precio" id="update_precio">
+                <label for="update_precio">Precio</label>
+                <input type="text" name="update_precio" id="update_precio">
 
-            <label for="update_categoria">Categoria</label>
-            <input type="text" name="update_categoria" id="update_categoria">
+                <label for="update_categoria">Categoria</label>
+                <input type="text" name="update_categoria" id="update_categoria">
 
-            <label for="update_imagen">Imagen</label>
-            <input type="file" name="update_imagen" id="update_imagen">
+                <label for="update_imagen">Imagen</label>
+                <input type="file" name="update_imagen" id="update_imagen">
 
-            <button type="submit" name="update">Actualizar</button>
-        </fieldset>
+                <button type="submit" name="update" class="action-btns" >Actualizar</button>
+            </fieldset>
 
-        <fieldset>
-            <legend>Borrar</legend>
-            <label for="delete_id">ID</label>
-            <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
-            <button type="submit" name="delete">Borrar</button>
-        </fieldset>
-    </form>
-
-    <table border="1px solid black">
-        <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-            <th>Categoria</th>
-            <th>Imagen</th>
-        </tr>
-        <?php foreach ($result as $fruta): ?>
+            <fieldset>
+                <legend>Borrar</legend>
+                <label for="delete_id">ID</label>
+                <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
+                <button type="submit" name="delete" class="action-btns" >Borrar</button>
+            </fieldset>
+        </form>
+        <table class="admin-table">
             <tr>
-                <td>
-                    <?php echo $fruta['id']; ?>
-                </td>
-                <td>
-                    <?php echo $fruta['nombre']; ?>
-                </td>
-                <td>
-                    <?php echo $fruta['cantidad']; ?>
-                </td>
-                <td>
-                    <?php echo $fruta['precio'] . '$'; ?>
-                </td>
-                <td>
-                    <?php echo $fruta['categoria']; ?>
-                </td>
-                <td>
-                <?php echo "<img src='../images/{$fruta['imagen']}'></img>"; ?>
-                </td>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Imagen</th>
             </tr>
-        <?php endforeach; ?>
-    </table>
+            <?php foreach ($result as $fruta): ?>
+                <tr>
+                    <td>
+                        <?php echo $fruta['id']; ?>
+                    </td>
+                    <td>
+                        <?php echo $fruta['nombre']; ?>
+                    </td>
+                    <td>
+                        <?php echo $fruta['cantidad']; ?>
+                    </td>
+                    <td>
+                        <?php echo $fruta['precio'] . '$'; ?>
+                    </td>
+                    <td>
+                        <?php echo $fruta['categoria']; ?>
+                    </td>
+                    <td>
+                    <?php echo "<img src='../images/{$fruta['imagen']}' width='100' height='100'></img>"; ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </section>
+</main>
 </body>
 
 </html>

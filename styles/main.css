@@ -130,6 +130,7 @@ a:link, a:visited, a:active {
   color: #3b3a3a;
   font-family: Fresh-Fruit;
   text-align: center;
+  letter-spacing: 0.2rem;
 }
 .wrap-2 .container {
   display: grid;
@@ -324,6 +325,79 @@ html .log-in form .form-btns button:hover {
   content: "";
   height: 100%;
   width: 100%;
+}
+
+.container {
+  padding: 2rem 4rem;
+}
+.container .admin-actions {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.container .admin-actions .exit-btn {
+  align-self: flex-end;
+  text-decoration: none;
+  outline: none;
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  background-color: #920303;
+  color: #f0f0f0;
+}
+.container .admin-actions fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  background-color: rgba(163, 208, 163, 0.505);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.container .admin-actions fieldset legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.container .admin-actions fieldset input {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.container .admin-actions fieldset .action-btns {
+  width: 30%;
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  background-color: #3b3a3a;
+  color: #f0f0f0;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.container .admin-actions fieldset .action-btns:hover {
+  background-color: #7c7979;
+}
+.container .admin-actions .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  margin: 3rem 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.container .admin-actions .admin-table th, .container .admin-actions .admin-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #3b3a3a;
+}
+.container .admin-actions .admin-table th {
+  background-color: #355641;
+  color: #f0f0f0;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */

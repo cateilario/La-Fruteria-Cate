@@ -176,7 +176,7 @@
     </div>
 
     <!--Slider de artículos más vendidos-->
-    <section class="container">
+    <section class="wrap-2">
       <div class="card-container swiper">
         <div class="card-content">
           <div class="swiper-wrapper">
@@ -254,19 +254,11 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <!--Carrusel imágenes-->
-      <section class="wrap-2">
-        <h1>Productos mas vendidos</h1>
-        <div class="carousel">
-          <button id="backward" class="carousel-btn"><i class="fa-solid fa-arrow-left fa-lg" style="color: #6f7276;"></i></button>
-          <div id="images" class="image-container"></div>
-          <button id="forward" class="carousel-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #6f7276;"></i></button>
-        </div>
-        <div class="controls">
-          <button id="play"><i class="fa-solid fa-play fa-lg" style="color: #6f7276;"></i></button>
-          <button id="stop" disabled><i class="fa-solid fa-pause fa-lg" style="color: #6f7276;"></i></button>
-        </div>
-      </section>
+    </section>
+      
+      <button id="elevator" class="elevator">
+        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
+      </button>
 
       <footer>
         <div class="info-1">
@@ -296,14 +288,6 @@
           <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
         </div>
       </footer>
-
-      <button id="elevator" class="elevator">
-        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
-      </button>
-
-      <button id="elevator" class="elevator">
-        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
-      </button>
 
       <script src="./scripts/swiper-bundle.min.js"></script>
       <script src="./scripts/main.js"></script>
