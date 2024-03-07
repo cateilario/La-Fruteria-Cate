@@ -73,12 +73,19 @@ a {
     }
 }
 
-/* Dark Mode */
+.open-menu,
+.close-menu {
+    display: none;
+    cursor: pointer;
+}
 
+/* Dark Mode */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
 }
+
+
 
 
 

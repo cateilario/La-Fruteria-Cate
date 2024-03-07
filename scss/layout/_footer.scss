@@ -1,58 +1,58 @@
-@use './../base/variables' as v;
+@use "./../base/variables" as v;
 
-footer{
-    width: 100%;
-    margin-bottom: -5rem;
-    background-color: v.$dark-green;
-    color: white;
+footer {
+  width: 100%;
+  margin-bottom: -5rem;
+  background-color: v.$dark-green;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.info-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-bottom: 0.5px solid v.$white;
+  padding-bottom: 2rem;
+  width: 80%;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.sm-container {
+  display: flex;
+  flex-direction: column;
+
+  .sm-icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
 }
 
-.info-1{
-    display: flex;
-    justify-content: space-around;
-    align-items:flex-start;
-    border-bottom: .5px solid v.$white;
-    padding-bottom: 2rem;
-    width: 80%;
-
-    h3{
-        text-transform: uppercase;
-        font-size: .9rem;
-    }
-
-    p{
-        font-size: .8rem;
-    }
+.info-2 {
+  font-size: 0.8rem;
 }
 
-.sm-container{
-    display: flex;
-    flex-direction: column;
-
-    .sm-icons{
-        display: flex;
-        gap: 1.5rem;
-        font-size: 1rem;
-    }
-}
-
-.info-2{
-    font-size: .8rem;
-}
-
-.elevator{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 30px;
-    right: 50px;
-    background-color: v.$green;
-    border: none;
-    cursor: pointer;
+.elevator {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  background-color: v.$green;
+  border: none;
+  cursor: pointer;
 }

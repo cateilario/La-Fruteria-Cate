@@ -1,94 +1,79 @@
-.swiper{
-    padding: 2rem 0;
+.swiper {
+  padding: 2rem 0;
+  width: 70%;
 }
 
 .swiper-wrapper {
+  display: flex;
+  gap: 2rem;
+
+  article {
+    width: 25%;
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 
-    article {
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-
-        .card-body {
-            align-self: flex-start;
-        }
-
-        img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin: 0 auto;
-        }
-
-        .card-footer {
-            width: 100%;
-        }
+    .card-body {
+      align-self: flex-start;
     }
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .card-footer {
+      width: 100%;
+    }
+  }
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    content: '';
+  content: "";
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    width: 5rem;
-    height: 5rem;
-    font-size: 3rem;
-    color: rgb(148, 140, 140);
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: rgb(148, 140, 140);
 
-    /* display: none; */
+  /* display: none; */
 }
 
 .swiper-button-prev {
-    left: 0;
+  left: 0;
 }
 
 .swiper-button-next {
-    right: 0;
+  right: 0;
 }
 
 .swiper-pagination-bullet {
-    background-color: rgb(113, 104, 104);
-    opacity: 1;
+  background-color: rgb(113, 104, 104);
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: rgb(173, 215, 48);
-}
-
-@media screen and (min-width: 320px) {
-    .card-body {
-        padding: 1rem;
-    }
+  background-color: rgb(173, 215, 48);
 }
 
 @media screen and (min-width: 768px) {
-    .card-content {
-        margin-inline: 3rem;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: block;
-    }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
 }
 
-@media screen and (min-width: 1120px) {
-    .card-container {
-        max-width: 1120px;
-    }
+.swiper-button-next {
+  right: -1rem;
+}
 
-    .swiper-button-next {
-        right: -1rem;
-    }
-
-    .swiper-button-prev {
-        left: -1rem;
-    }
+.swiper-button-prev {
+  left: -1rem;
 }

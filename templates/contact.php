@@ -20,7 +20,8 @@
     </div>
     <div class="nav-list">
       <a href="./login_register.php" class="nav-btn"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</a>
-      <nav class="nav-bar">
+      <nav class="nav-bar" id="nav">
+        <a id="close-nav" class="close-menu"><i class="fa-solid fa-xmark"></i></a>
         <ul>
           <li><a href="../index.php">Inicio</a></li>
           <li><a href="./aboutUs.php">Acerca de</a></li>
@@ -28,6 +29,7 @@
         </ul>
       </nav>
       <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
+      <a class="open-menu" id="open-nav"><i class="fa-solid fa-bars fa-2xl"></i></a>
     </div>
   </header>
   <section class="wrap-2" id="contact">
@@ -101,5 +103,23 @@
           <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
         </div>
       </footer>
+
+  <script>
+        const nav = document.getElementById("nav");
+        const openBtn = document.getElementById("open-nav");
+        const closeBtn = document.getElementById("close-nav");
+
+        const toggleMenu = () => {
+          nav.classList.toggle("visible");
+        };
+
+        window.addEventListener("scroll", () => {
+          const scrollPosition = window.scrollY;
+          if (scrollPosition > 0) nav.classList.remove("visible");
+        });
+
+        openBtn.addEventListener("click", toggleMenu);
+        closeBtn.addEventListener("click", toggleMenu);
+      </script>
   </body>
 </html>

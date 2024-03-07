@@ -1,96 +1,95 @@
-@use './../base/variables' as v;
+@use "./../base/variables" as v;
 
-.container{
-    padding: 1rem 4rem;
+.container {
+  padding: 1rem 4rem;
 
-    .admin-actions{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-    
-        .exit-btn{
-            align-self: flex-end;
-            text-decoration: none;
-            outline: none;
-            padding: .5rem 2rem;
-            border-radius: 6px;
-            background-color: v.$color-red;
-            color: v.$white;
-        }
-        
-        fieldset{
-            display: flex;
-            flex-direction: column;
-            border: none;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding: 1rem 2rem;
-            border-radius: 6px;
-            background-color: rgba(163, 208, 163, 0.505);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+  .admin-actions {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 
-            legend{
-                font-size: 1.2rem;
-                font-weight: bold;
-                margin-bottom: 1rem;
-                text-transform: uppercase;
-            }
-
-            input{
-                padding: .7rem;
-                border-radius: 6px;
-                border: none;
-                outline: none;
-                box-shadow: 1px 2px 5px rgba(0,0,0,.2);
-            }
-
-            .action-btns{
-                width: 30%;
-                padding: .6rem 2rem;
-                border-radius: 6px;
-                background-color: v.$dark-grey;
-                color: v.$white;
-                border: none;
-                margin: 0 auto;
-                cursor: pointer;
-                transition: all .3s ease-in-out;
-
-                &:hover{
-                    background-color: v.$light-grey;
-                }
-            }
-        }
-
-        
+    .exit-btn {
+      align-self: flex-end;
+      text-decoration: none;
+      outline: none;
+      padding: 0.5rem 2rem;
+      border-radius: 6px;
+      background-color: v.$color-red;
+      color: v.$white;
     }
+
+    fieldset {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border: none;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      background-color: rgba(163, 208, 163, 0.505);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+      legend {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      input {
+        padding: 0.7rem;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .action-btns {
+        padding: 0.8rem 2rem;
+        border-radius: 6px;
+        background-color: v.$dark-grey;
+        color: v.$white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border: none;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: v.$light-grey;
+        }
+      }
+    }
+  }
 }
 
 .admin-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 6px;
-    margin: 3rem 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  margin: 3rem 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
-    th,
-    td {
-        padding: 1.5rem;
-        border-bottom: 1px solid v.$white;
-        text-align: center;
-    }
+  th,
+  td {
+    padding: 1.5rem;
+    border-bottom: 1px solid v.$white;
+    text-align: center;
+  }
 
-    th {
-        background-color: v.$dark-green;
-        color: v.$white;
-        text-transform: uppercase;
-    }
+  th {
+    background-color: v.$dark-green;
+    color: v.$white;
+    text-transform: uppercase;
+  }
 
-    tr th:last-child {
-        border-radius: 0 6px 0 0;
-    }
+  tr th:last-child {
+    border-radius: 0 6px 0 0;
+  }
 
-    tr th:first-child {
-        border-radius: 6px 0 0 0;
-    }
-
+  tr th:first-child {
+    border-radius: 6px 0 0 0;
+  }
 }

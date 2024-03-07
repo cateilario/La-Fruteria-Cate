@@ -21,7 +21,8 @@
     </div>
     <div class="nav-list">
       <a href="./login_register.php" class="nav-btn"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</a>
-      <nav class="nav-bar">
+      <nav class="nav-bar" id="nav">
+        <a id="close-nav" class="close-menu"><i class="fa-solid fa-xmark"></i></a>
         <ul>
           <li><a href="../index.php">Inicio</a></li>
           <li><a href="./aboutUs.php">Acerca de</a></li>
@@ -29,15 +30,16 @@
         </ul>
       </nav>
       <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
+      <a class="open-menu" id="open-nav"><i class="fa-solid fa-bars fa-2xl"></i></a>
     </div>
   </header>
 
   <main class="about">
   <section class="about-section">
-    <img class="about-img" src=".././assets/imgs/banana.gif" alt="banana-gif">
+    <img class="about-img" src=".././assets/imgs/banana.gif" alt="banana-gif" class="banana-gif">
     <div class="about-div">
       <h1 class="about-title">¿Tienes hambre? Nosotros tambien...</h1>
-      <p>Por eso a veces nos comemos nuestros productos de alta calidad, así que si no te llega el envío es porque se lo comío alguien!</p>
+      <p>Por eso a veces nos comemos nuestros productos de alta calidad, así que si no te llega el envío es porque se lo comió alguien</p>
       <ul class="list">
         <li>
           <p>59% </span>de usuarios contentos</p>
@@ -60,7 +62,7 @@
       <h1 class="about-title" >Nuestra misión es ganar dinero a tu cost.... Alimentarte y que estés sano.</h1>
       <p>Nos preocupamos por tu salud, asi que damos lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor de lo mejor. <br/><span>(Ayuda por favor quiero vacaciones de 342 años, la vida de adulto es dura por este mundo capitalista que nos hace creer que trabajar y hacer dinero es hacer lo correcto y lo demás perder el tiempo pero yo solo quiero bailar en Bangkok 24/7)</span></p>
     </div>
-    <img class="orange-img" src=".././assets/imgs/rodaja-de-naranja.png" alt="" width="250">
+    <img class="orange-img" src=".././assets/imgs/rodaja-de-naranja.png" alt="" width="200">
 </section>
 </main>
 
@@ -92,5 +94,23 @@
           <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
         </div>
       </footer>
+
+  <script>
+        const nav = document.getElementById("nav");
+        const openBtn = document.getElementById("open-nav");
+        const closeBtn = document.getElementById("close-nav");
+
+        const toggleMenu = () => {
+          nav.classList.toggle("visible");
+        };
+
+        window.addEventListener("scroll", () => {
+          const scrollPosition = window.scrollY;
+          if (scrollPosition > 0) nav.classList.remove("visible");
+        });
+
+        openBtn.addEventListener("click", toggleMenu);
+        closeBtn.addEventListener("click", toggleMenu);
+      </script>
   </body>
 </html>

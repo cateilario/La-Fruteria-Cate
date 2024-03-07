@@ -1,23 +1,23 @@
 @font-face {
-    font-family: "Fresh-Fruit";
-    src: url(/la-fruteria-cate/assets/fonts/Fresh-Fruit.ttf);
+  font-family: "Fresh-Fruit";
+  src: url(/la-fruteria-cate/assets/fonts/Fresh-Fruit.ttf);
 }
 
 @font-face {
-    font-family: "Open";
-    src: url(/la-fruteria-cate/assets/fonts/OpenSans-Regular.ttf);
+  font-family: "Open";
+  src: url(/la-fruteria-cate/assets/fonts/OpenSans-Regular.ttf);
 }
 
-*{
-    font-family: Open;
-    box-sizing: border-box;
+* {
+  font-family: Open;
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-p{
-    text-wrap:pretty;
+p {
+  text-wrap: pretty;
 }

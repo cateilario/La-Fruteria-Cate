@@ -1,70 +1,66 @@
-@use './../base/variables' as v;
+@use "./../base/variables" as v;
 
-.products-grid{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+.products-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .card {
-    border: .5px solid #c9c9c9;
-    border-radius: 6px;
-    box-shadow: 0 5px 8px v.$light-grey;
-    transition: all .3s ease-out;
+  border: 0.5px solid #c9c9c9;
+  border-radius: 6px;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 5px 8px v.$light-grey;
+  transition: all 0.3s ease-out;
 
-    &:hover {
-        transform: translateY(-5px);
-        border: 1px solid v.$dark-green;
+  &:hover {
+    transform: translateY(-5px);
+    border: 1px solid v.$dark-green;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+
+  .card-body {
+    padding: 0 1rem;
+
+    h2 {
+      font-size: 1rem;
     }
 
-    img {
-        width: 100%;
-        object-fit: contain;
-        aspect-ratio: 1/1;
+    p {
+      font-size: 1rem;
+
+      span {
+        font-size: 0.7rem;
+      }
     }
+  }
 
-    .card-body {
-        padding: 0 1rem;
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 
-        h2 {
-            font-size: 1rem;
-        }
+    button {
+      border: 0;
+      border-radius: 4px;
+      width: 100%;
+      padding: 0.8rem 0;
+      background-color: v.$dark-green;
+      color: v.$white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
 
-        p {
-            font-size: 1rem;
-
-            span {
-                font-size: .7rem;
-            }
-        }
+      &:hover {
+        background-color: v.$green;
+      }
     }
-
-    .card-footer {
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-
-        button {
-            border: 0;
-            border-radius: 4px;
-            width: 100%;
-            padding: .8rem 0;
-            background-color: v.$dark-green;
-            color: v.$white;
-            cursor: pointer;
-            transition: all .5s ease-in-out;
-
-            &:hover {
-                background-color: v.$green;
-            }
-        }
-
-
-    }
+  }
 }
-
-
-
-
-
