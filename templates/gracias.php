@@ -38,28 +38,34 @@ $order_details_result = mysqli_query($conn, $order_details_query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href=".././styles/main.css" />
+    <title>Resumen Pedido</title>
 </head>
 <body>
-    <h2>Gracias por tú pedido!</h2>
-    <h3>Resumen</h3>
-    <p><strong>Fecha Pedido:</strong> <?php echo $order['order_date']; ?></p>
-    <p><strong>Total :</strong> $<?php echo number_format($order['total'], 2); ?></p>
-    <h4>Detalles:</h4>
-    <table>
-        <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Total</th>
-        </tr>
-        <?php while($row = mysqli_fetch_assoc($order_details_result)) { ?>
-            <tr>
-                <td><?php echo $row['nombre']; ?></td>
-                <td><?php echo $row['quantity']; ?></td>
-                <td><?php echo number_format($row['total'], 2); ?>$</td>
-            </tr>
-        <?php } ?>
-    </table>
-    <a href="?logout=true">Volver a la tienda</a>
+    <main class="wrap-2 container">
+        <h1>¡Gracias por tu pedido!</h1>
+        <fieldset class="order-details" >
+            <legend>Resumen</legend>
+            <p>Fecha Pedido: <span> <?php echo $order['order_date']; ?></span></p>
+            
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+                <?php while($row = mysqli_fetch_assoc($order_details_result)) { ?>
+                    <tr>
+                        <td><?php echo $row['nombre']; ?></td>
+                        <td><?php echo $row['quantity']; ?></td>
+                        <td><?php echo number_format($row['total'], 2); ?>$</td>
+                    </tr>
+                <?php } ?>
+            </table>
+            <p>Total:<span class="total-price">$<?php echo number_format($order['total'], 2); ?></span></p>
+    </fieldset>
+    <a class="grey-btn" href="?logout=true">Volver a la tienda</a>
+    </main>
 </body>
 </html>

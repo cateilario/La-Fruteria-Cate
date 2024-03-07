@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Contacto</title>
     <link rel="stylesheet" href=".././styles/main.css" />
@@ -19,12 +19,12 @@
         </svg></a>
     </div>
     <div class="nav-list">
-      <a href="templates/login_register.php" class="nav-btn"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</a>
+      <a href="./login_register.php" class="nav-btn"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</a>
       <nav class="nav-bar">
         <ul>
-          <li><a href="index.php">Inicio</a></li>
-          <li><a href="./templates/aboutUs.php">Acerca de</a></li>
-          <li><a href="./templates/contact.php">Contacto</a></li>
+          <li><a href="../index.php">Inicio</a></li>
+          <li><a href="./aboutUs.php">Acerca de</a></li>
+          <li><a href="./contact.php">Contacto</a></li>
         </ul>
       </nav>
       <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
@@ -36,7 +36,7 @@
         <h1 class="contact-title">CONTACTO</h1>
       </div>     
       <div class="contact-section"> 
-        <div>
+        <div class="form-container">
           <p>¿Tienes alguna duda o sugerencia? ¡Estamos aquí para ayudarte! Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
           <form action="" method="get" id="contact-form" autocomplete="off">
             <label for="name" class="input-container">
@@ -55,22 +55,51 @@
               <i class="fa-solid fa-phone icon"></i>
               <input id="phone" type="tel" name="phone" placeholder="Teléfono" class="input-field">
             </label>
-            <label for="message" class="input-container">
+            <label for="message" class="input-container message">
               <i class="fa-solid fa-comment icon"></i>
               <textarea name="message" id="message" cols="5" rows="5" placeholder="Mensaje" class="input-field"></textarea>
             </label>
             <button type="submit" id="submit-btn" class="form-btn">Enviar</button>
           </form>
-          </div>
-                <div class="contact-info">
-                    <p>Si lo prefieres, tenemos otros medios de contacto:</p>
-                    <p><i class="bi bi-telephone-fill icon-contact"></i>985 88 88 88</p>
-                    <p><i class="bi bi-envelope-fill icon-contact"></i>laquitafila@ejemplo.com</p>
-                    <p><i class="bi bi-geo-alt-fill icon-contact"></i>Calle Donoso Cortés, 3, Gijón</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.49944553208!2d-5.6495862237949686!3d43.53362987110804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c81b8161451%3A0xf63c89418123c797!2sC.%20Donoso%20Cort%C3%A9s%2C%20Gij%C3%B3n%2C%2033204%2C%20Asturias!5e0!3m2!1ses!2ses!4v1705669792140!5m2!1ses!2ses" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+        </div>
+        <div class="contact-info">
+          <p>Si lo prefieres, tenemos otros medios de contacto:</p>
+          <p><i class="fa-solid fa-phone icon-contact"></i>985 88 88 88</p>
+          <p><i class="fa-solid fa-envelope icon-contact"></i>laquitafila@ejemplo.com</p>
+          <p><i class="fa-solid fa-location-dot icon-contact"></i>Calle Donoso Cortés, 3, Gijón</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.49944553208!2d-5.6495862237949686!3d43.53362987110804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c81b8161451%3A0xf63c89418123c797!2sC.%20Donoso%20Cort%C3%A9s%2C%20Gij%C3%B3n%2C%2033204%2C%20Asturias!5e0!3m2!1ses!2ses!4v1705669792140!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
             </div>
         </div>
   </section>
+
+  <footer>
+        <div class="info-1">
+          <div>
+            <h3>Atención al cliente</h3>
+            <p>Preguntas Frecuentes</p>
+            <p>hola@contacto.es</p>
+            <p>985555555</p>
+          </div>
+          <div>
+            <h3>Conócenos</h3>
+            <p>Quiénes somos</p>
+            <p>Encuéntranos</p>
+            <p>Recetas</p>
+            <p>Trabaja con nosotros</p>
+          </div>
+          <div class="sm-container">
+            <h3>Síguenos</h3>
+            <p class="sm-icons">
+              <i class="fa-brands fa-instagram fa-2xl" style="color: #fafafa;"></i>
+              <i class="fa-brands fa-x-twitter fa-2xl" style="color: #fafafa;"></i>
+              <i class="fa-brands fa-youtube fa-2xl" style="color: #fafafa;"></i>
+            </p>
+          </div>
+        </div>
+        <div class="info-2">
+          <p>© 2024 - La Quinta Fila, todos los derechos reservados</p>
+        </div>
+      </footer>
   </body>
 </html>

@@ -16,6 +16,10 @@ body {
   padding: 0;
 }
 
+p {
+  text-wrap: pretty;
+}
+
 header {
   min-height: 15vh;
   display: flex;
@@ -133,7 +137,7 @@ body.dark-mode {
   padding-bottom: 3rem;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .wrap-2 h1 {
   text-transform: uppercase;
@@ -359,24 +363,65 @@ footer {
   cursor: pointer;
 }
 
-.info-us {
-  margin-top: 10rem;
-  width: 80rem;
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+.about .about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+.about .about-section .about-div {
+  width: 60%;
+}
+.about .about-section .about-div h1 {
+  font-size: 1.8rem;
+  color: #3b3a3a;
+}
+.about .about-section .about-img {
+  width: 30%;
+  height: 100%;
+}
+.about .about-section .about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about .about-section .about-title {
+  font-family: Fresh-Fruit;
+}
+.about .about-section p {
+  font-size: 1rem;
+  text-align: justify;
+}
+.about .about-section p span {
+  font-size: 0.8rem;
+}
+.about .about-section ul {
+  list-style-image: url("/la-fruteria-cate/assets/imgs/platano.png");
+}
+.about .about-section ul li {
+  font-size: 0.8rem;
 }
 
-.info-us h2 {
-  font-size: 3.5rem;
-  margin: 0;
-  padding: 0;
-  color: rgb(33, 179, 30);
-  height: 10rem;
-  text-decoration: underline;
+@keyframes roll-img {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-.info-us p {
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
+.orange-img {
+  animation: roll-img 7s infinite linear;
 }
 
 .contact-container {
@@ -384,7 +429,9 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: rgba(167, 223, 167, 0.658);
+  background-color: rgba(186, 228, 186, 0.808);
+  color: #3b3a3a;
+  font-weight: 500;
   border-radius: 6px;
   justify-content: center;
   padding: 2rem;
@@ -395,7 +442,16 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: 2rem;
+  padding: 0 2rem;
+}
+.contact-container .contact-section .form-container {
+  padding: 0 2rem;
+  border-right: 1px solid #7c7979;
+}
+.contact-container .contact-section .form-container p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
 }
 .contact-container .contact-section form {
   display: flex;
@@ -410,7 +466,7 @@ footer {
   width: 100%;
   border: 0;
   border-radius: 6px;
-  color: var(--primary-color);
+  color: #3b3a3a;
   resize: none;
   font-size: 0.9rem;
 }
@@ -439,13 +495,33 @@ footer {
   background-color: #3b3a3a;
   color: white;
   padding: 0.8rem 2rem;
+  font-size: 0.9rem;
   border: 0;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+.contact-container .contact-section .form-btn:hover {
+  background-color: rgba(139, 138, 138, 0.827);
+}
+.contact-container .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.contact-container .contact-info p {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.contact-container .contact-info .icon-contact {
+  font-size: 1.5em;
+  margin-right: 1rem;
+}
 
-html .log-in {
+.log-in {
   background: url("/la-fruteria-cate/assets/imgs/hero.jpg") center/cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -454,14 +530,14 @@ html .log-in {
   justify-content: center;
   align-items: center;
 }
-html .log-in .log-form {
+.log-in .log-form {
   position: relative;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 1rem;
   border: none;
   border-radius: 6px;
   background-color: rgba(214, 213, 213, 0.797);
@@ -469,28 +545,33 @@ html .log-in .log-form {
   -webkit-box-shadow: -1px 2px 10px 3px rgb(189, 189, 189);
   -moz-box-shadow: -1px 2px 10px 3px rgb(189, 189, 189);
   box-shadow: -1px 2px 10px 3px rgb(189, 189, 189);
-  width: 40%;
   padding: 1.5rem;
 }
-html .log-in .log-form h2 {
+.log-in .log-form.hidden {
+  display: none;
+}
+.log-in .log-form h2 {
   text-transform: uppercase;
 }
-html .log-in .log-form label {
+.log-in .log-form label {
   text-align: left;
 }
-html .log-in .log-form input {
-  padding: 0.5rem;
+.log-in .log-form input {
+  padding: 0.8rem;
   width: 50%;
   border-radius: 6px;
   border: none;
 }
-html .log-in .log-form .form-btns {
+.log-in .log-form input:focus {
+  outline: none;
+}
+.log-in .log-form .form-btns {
   display: flex;
   align-items: center;
   margin-top: 2.5rem;
   gap: 3rem;
 }
-html .log-in .log-form .form-btns button {
+.log-in .log-form .form-btns button {
   border: 0;
   border-radius: 6px;
   background-color: rgb(157, 157, 157);
@@ -500,8 +581,15 @@ html .log-in .log-form .form-btns button {
   text-transform: uppercase;
   font-weight: 600;
 }
-html .log-in .log-form .form-btns button:hover {
+.log-in .log-form .form-btns button:hover {
   background-color: rgba(182, 182, 182, 0.827);
+}
+.log-in .log-form .form-btns .back-btn {
+  background-color: #920303;
+  color: #f0f0f0;
+}
+.log-in .log-form .form-btns .back-btn:hover {
+  background-color: rgba(173, 71, 71, 0.815);
 }
 
 .log-in::before {
@@ -514,7 +602,7 @@ html .log-in .log-form .form-btns button:hover {
 }
 
 .container {
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
 }
 .container .admin-actions {
   width: 80%;
@@ -568,28 +656,95 @@ html .log-in .log-form .form-btns button:hover {
 .container .admin-actions fieldset .action-btns:hover {
   background-color: #7c7979;
 }
-.container .admin-actions .admin-table {
+
+.admin-table {
   width: 100%;
   border-collapse: collapse;
   border-radius: 6px;
   margin: 3rem 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
-.container .admin-actions .admin-table th, .container .admin-actions .admin-table td {
-  padding: 1rem;
-  text-align: left;
+.admin-table th,
+.admin-table td {
+  padding: 1.5rem;
   border-bottom: 1px solid #f0f0f0;
+  text-align: center;
 }
-.container .admin-actions .admin-table th {
+.admin-table th {
   background-color: #355641;
   color: #f0f0f0;
   text-transform: uppercase;
 }
-.container .admin-actions .admin-table tr th:last-child {
+.admin-table tr th:last-child {
   border-radius: 0 6px 0 0;
 }
-.container .admin-actions .admin-table tr th:first-child {
+.admin-table tr th:first-child {
   border-radius: 6px 0 0 0;
+}
+
+.admin-actions .product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.admin-actions .product-actions input[type=number] {
+  border: none;
+  font-size: 1rem;
+}
+
+.grey-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b3a3a;
+  color: #f0f0f0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.grey-btn:hover {
+  background-color: #7c7979;
+}
+
+.order-details {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 6px;
+  padding: 2rem 2.5rem;
+}
+.order-details legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3b3a3a;
+}
+.order-details p {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+.order-details p .total-price {
+  font-size: 1.5rem;
+  color: #920303;
+}
+.order-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.order-details table th,
+.order-details table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.order-details table th {
+  background-color: #355641;
+  color: #f0f0f0;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */

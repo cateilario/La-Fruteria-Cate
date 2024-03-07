@@ -14,12 +14,16 @@ if (!isset($_SESSION['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href=".././styles/main.css" />
+    <title>Área Cliente</title>
 </head>
 <body>
-    <h1>Bienvenido <?php echo $username ?></h1>
+    <main class="wrap-2 container">
+        <h1>Bienvenido <?php echo $username ?></h1>
     
-<?php include 'Components/itemcard.php'?>
+    <?php include 'Components/itemcard.php'?>
+    </main>
     
 </body>
 </html>

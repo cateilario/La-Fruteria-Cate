@@ -9,14 +9,9 @@ $conn = conectarDB();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <title>Login/Register</title>
     <link rel="stylesheet" href=".././styles/main.css">
-    <style>
-        /* Hide the registration form initially */
-        #registrationForm {
-            display: none;
-        }
-    </style>
 </head>
 
 <body class="log-in">
@@ -35,7 +30,7 @@ $conn = conectarDB();
     </form>
 
     <!-- Registration form -->
-    <form class="log-form" id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" style="display:none;">
+    <form class="log-form hidden" id="registrationForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h2>Registrarse</h2>
         <label for="newUsername">Nombre usuario:</label>
         <input type="text" name="newUsername" placeholder="User name">
@@ -45,6 +40,7 @@ $conn = conectarDB();
         <input type="password" name="newPassword" placeholder="Password">
         <div class="form-btns">
             <button type="submit" name="register">Registrarse</button>
+            <button type="button" onclick="toggleRegistrationForm()" class="back-btn">Volver</button>
         </div>
     </form>
 
@@ -52,8 +48,13 @@ $conn = conectarDB();
         function toggleRegistrationForm() {
             const registrationForm = document.getElementById('registrationForm');
             const loginForm = document.getElementById("loginForm");
-            registrationForm.style.display = (registrationForm.style.display === 'none') ? 'block' : 'none';
-            loginForm.style.display = "none";
+            // Toggle the 'hidden' class to control visibility
+            registrationForm.classList.toggle('hidden');
+            loginForm.classList.add('hidden'); // Oculta el formulario de inicio de sesión
+            // Si el formulario de registro está oculto, muestra el de inicio de sesión
+            if (registrationForm.classList.contains('hidden')) {
+                loginForm.classList.remove('hidden');
+            }
         }
     </script>
 

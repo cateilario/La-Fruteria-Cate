@@ -1,19 +1,73 @@
-.info-us {
-    margin-top: 10rem;
-    width: 80rem;
+@use './../base/variables' as v;
+
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    .about-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 3rem;
+        padding: 0 2rem;
+        
+        .about-div{
+            width: 60%;
+
+            h1{
+                font-size: 1.8rem;
+                color: v.$dark-grey;
+            }
+        }
+
+        .about-img{
+            width: 30%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .about-title{
+            font-family: Fresh-Fruit;
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: justify;
+
+            span{
+                font-size: .8rem;
+            }
+        }
+
+        ul{
+            list-style-image: url('/la-fruteria-cate/assets/imgs/platano.png');
+            li{
+                font-size: .8rem;
+            }
+        }
+    }
 }
 
-.info-us h2 {
-    font-size: 3.5rem;
-    margin: 0;
-    padding: 0;
-    color: rgb(33, 179, 30);
-    height: 10rem;
-    text-decoration: underline;
+@keyframes roll-img {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.info-us p {
-    font-size: 2rem;
-    margin: 0;
-    padding: 0;
+.orange-img {
+    animation: roll-img 7s infinite linear;
 }
