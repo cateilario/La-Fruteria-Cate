@@ -71,13 +71,21 @@
             th, td{
                 padding: 1rem;
                 text-align: left;
-                border-bottom: 1px solid v.$dark-grey;
+                border-bottom: 1px solid v.$white;
             }
 
             th{
                 background-color: v.$dark-green;
                 color: v.$white;
                 text-transform: uppercase;
+            }
+
+            tr th:last-child{
+                border-radius: 0 6px 0 0;
+            }
+
+            tr th:first-child{
+                border-radius: 6px 0 0 0;
             }
 
         }

@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Acerca de Nosotros</title>
-  <link rel="stylesheet" href="/la-fruteria-cate/styles/main.css" />
+  <link rel="stylesheet" href=".././styles/main.css" />
 </head>
 
 <body>
@@ -17,14 +20,15 @@
         </svg></a>
     </div>
     <div class="nav-list">
-      <button class="nav-btn" role="button"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</button>
+      <a href="templates/login_register.php" class="nav-btn"><i class="fa-solid fa-user fa-sm" style="color: #ffff;"></i>Log-In</a>
       <nav class="nav-bar">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="/templates/contact.html">Contacto</a></li>
-          <li><a href="/templates/aboutUs.html">Acerca de nosotros</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="./templates/aboutUs.php">Acerca de</a></li>
+          <li><a href="./templates/contact.php">Contacto</a></li>
         </ul>
       </nav>
+      <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
     </div>
   </header>
 

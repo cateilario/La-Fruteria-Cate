@@ -27,8 +27,8 @@
       <nav class="nav-bar">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="/templates/contact.php">Acerca de</a></li>
-          <li><a href="/templates/aboutUs.php">Contacto</a></li>
+          <li><a href="./templates/aboutUs.php">Acerca de</a></li>
+          <li><a href="./templates/contact.php">Contacto</a></li>
         </ul>
       </nav>
       <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
@@ -37,7 +37,7 @@
 
   <section class="wrap-1 hero">
     <div class="hero-body">
-      <h1>Rincón Fruticola <br>La Quinta Fila</h1>
+      <h1>Rincon Fruticola <br>La Quinta Fila</h1>
       <p>
         Tenemos muchas frutas o eso creemos. A veces nos roban los ratones
         gigantes que hay debajo de la nevera pero que se le va a hacer. La verdad estoy rellenando esto para ocupar más, Lorem impsum estaría bien usarlo pero soy masoca.

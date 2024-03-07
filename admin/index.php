@@ -52,14 +52,14 @@ $join = mysqli_query($conn,$queryPedidos);
 <body>
     <main class="wrap-2 container">
         <h1>Panel Administracion</h1>
-        <h2>Hola <?php echo $_SESSION['username'] ?></h2>
+        <h3>¡Hola <?php echo $_SESSION['username'] ?>!</h3>
 
         <section class="admin-actions">
         <a href="?logout=true" class="exit-btn">Exit</a>
         
         <form action="#" method="post" enctype="multipart/form-data">
             <fieldset>
-                <legend>Crear</legend>
+                <legend>Crear producto</legend>
                 <label for="create_nombre">Nombre</label>
                 <input type="text" name="create_nombre" id="create_nombre">
 
@@ -80,7 +80,7 @@ $join = mysqli_query($conn,$queryPedidos);
             </fieldset>
 
             <fieldset>
-                <legend>Actualizar</legend>
+                <legend>Actualizar producto</legend>
                 <label for="update_id">ID</label>
                 <input type="text" name="update_id" id="update_id">
 
@@ -103,7 +103,7 @@ $join = mysqli_query($conn,$queryPedidos);
             </fieldset>
 
             <fieldset>
-                <legend>Borrar</legend>
+                <legend>Borrar producto</legend>
                 <label for="delete_id">ID</label>
                 <input type="text" name="delete_id" id="delete_id" placeholder="1,2,3...">
                 <button type="submit" name="delete" class="action-btns" >Borrar</button>
