@@ -52,9 +52,10 @@ $join = mysqli_query($conn,$queryPedidos);
 <body>
     <main class="wrap-2 container">
         <h1>Panel Administracion</h1>
+        <h2>Hola <?php echo $_SESSION['username'] ?></h2>
 
         <section class="admin-actions">
-        <a href="../index.php" class="exit-btn">Exit</a>
+        <a href="?logout=true" class="exit-btn">Exit</a>
         
         <form action="#" method="post" enctype="multipart/form-data">
             <fieldset>
@@ -140,6 +141,38 @@ $join = mysqli_query($conn,$queryPedidos);
                 </tr>
             <?php endforeach; ?>
         </table>
+        
+<table class="admin-table">
+        <tr>
+            <th>Id pedido</th>
+            <th>Nombre de usuario</th>
+            <th>ID detalle pedido</th>
+            <th>Total</th>
+            <th>Fecha</th>
+        </tr>
+        <?php while ($row = mysqli_fetch_assoc($join)): ?>
+            <tr>
+                <td>
+                    <?php echo $row['id']; ?>
+                </td>
+                <td>
+                    <?php echo $row['user_name']; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['detalle_pedido']; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['total'] . " €"; ?>
+                </td>
+
+                <td>
+                    <?php echo $row['order_date']; ?>
+                </td>
+            </tr>
+        <?php endwhile ?>
+    </table>
     </section>
 </main>
 </body>
