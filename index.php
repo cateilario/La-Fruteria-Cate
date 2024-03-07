@@ -29,15 +29,12 @@
           <li><a href="/templates/aboutUs.php">Contacto</a></li>
         </ul>
       </nav>
-      <a href=""><i class="fa-solid fa-cart-shopping fa-lg" style="color:black;"></i></a>
+      <button id="dark-mode-toggle"><i class="fa-solid fa-moon fa-xl"></i></button>
     </div>
   </header>
 
   <section class="wrap-1 hero">
     <div class="hero-body">
-      <button id="dark-mode-toggle">
-        <img src="/assets/imgs/night-mode.png" alt="Dark Mode">
-      </button>
       <h1>Rincón Fruticola <br>La Quinta Fila</h1>
       <p>
         Tenemos muchas frutas o eso creemos. A veces nos roban los ratones
@@ -73,7 +70,7 @@
   <section class="wrap-2">
     <h1>Productos</h1>
     <div class="products-grid">
-      <article>
+      <article class="card" >
         <img src="./assets/imgs/product.png" alt="">
         <div class="card-body">
           <h2>Fresas</h2>
@@ -83,7 +80,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product2.png" alt="">
         <div class="card-body">
           <h2>Lechuga</h2>
@@ -93,7 +90,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product3.png" alt="">
         <div class="card-body">
           <h2>Alcachofas</h2>
@@ -103,7 +100,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product4.png" alt="">
         <div class="card-body">
           <h2>Piña</h2>
@@ -113,7 +110,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product5.png" alt="">
         <div class="card-body">
           <h2>Manzana</h2>
@@ -123,7 +120,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product6.png" alt="">
         <div class="card-body">
           <h2>Aguacate</h2>
@@ -133,7 +130,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product7.png" alt="">
         <div class="card-body">
           <h2>Melón</h2>
@@ -143,7 +140,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product10.png" alt="">
         <div class="card-body">
           <h2>Arándanos</h2>
@@ -153,7 +150,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product9.png" alt="">
         <div class="card-body">
           <h2>Naranjas</h2>
@@ -163,7 +160,7 @@
           <button>Añadir</button>
         </div>
       </article>
-      <article>
+      <article class="card">
         <img src="./assets/imgs/product8.png" alt="">
         <div class="card-body">
           <h2>Plátanos</h2>
@@ -177,71 +174,48 @@
 
     <!--Slider de artículos más vendidos-->
     <section class="wrap-2">
+    <h1>Productos mas vendidos</h1>
       <div class="card-container swiper">
         <div class="card-content">
           <div class="swiper-wrapper">
-            <article class="card-article swiper-slide">
-              <div class="card-image">
-                <img src="assets/imgs/product.png" alt="image" class="card-img">
-                <div class="card-shadow"></div>
-              </div>
+            <article class="card swiper-slide">
+              <img src="./assets/imgs/product9.png" alt="">
               <div class="card-body">
-                <h2 class="card-name">Fresa</h2>
-                <p class="card-price">8,90 <span class="card-span">€/kg</span></p>
-
-                <a href="#" class="card-button">Más Info</a>
+                <h2>Naranjas</h2>
+                <p>3,50 <span>€/kg</span></p>
+              </div>
+              <div class="card-footer">
+                <button>Añadir</button>
               </div>
             </article>
-
-            <article class="card-article swiper-slide">
-              <div class="card-image">
-                <img src="assets/imgs/product5.png" alt="image" class="card-img">
-                <div class="card-shadow"></div>
-              </div>
+            <article class="card swiper-slide">
+              <img src="./assets/imgs/product8.png" alt="">
               <div class="card-body">
-                <h2 class="card-name">Manzana</h2>
-                <p class="card-price">2,90 <span class="card-span">€/kg</span></p>
-
-                <a href="#" class="card-button">Más Info</a>
+                <h2>Plátanos</h2>
+                <p>2,80 <span>€/kg</span></p>
+              </div>
+              <div class="card-footer">
+                <button>Añadir</button>
               </div>
             </article>
-
-            <article class="card-article swiper-slide">
-              <div class="card-image">
-                <img src="assets/imgs/product7.png" alt="image" class="card-img">
-                <div class="card-shadow"></div>
-              </div>
+            <article class="card swiper-slide">
+              <img src="./assets/imgs/product7.png" alt="">
               <div class="card-body">
-                <h2 class="card-name">Melón</h2>
-                <p class="card-price">5,20 <span class="card-span">€/kg</span></p>
-
-                <a href="#" class="card-button">Más Info</a>
+                <h2>Melón</h2>
+                <p>5,20 <span>€/kg</span></p>
+              </div>
+              <div class="card-footer">
+                <button>Añadir</button>
               </div>
             </article>
-
-            <article class="card-article swiper-slide">
-              <div class="card-image">
-                <img src="assets/imgs/product10.png" alt="image" class="card-img">
-                <div class="card-shadow"></div>
-              </div>
+            <article class="card swiper-slide">
+              <img src="./assets/imgs/product10.png" alt="">
               <div class="card-body">
-                <h2 class="card-name">Arándano</h2>
-                <p class="card-price">4,80 <span class="card-span">€/kg</span></p>
-
-                <a href="#" class="card-button">Más Info</a>
+                <h2>Arándanos</h2>
+                <p>4,80 <span>€/kg</span></p>
               </div>
-            </article>
-
-            <article class="card-article swiper-slide">
-              <div class="card-image">
-                <img src="assets/imgs/product8.png" alt="image" class="card-img">
-                <div class="card-shadow"></div>
-              </div>
-              <div class="card-body">
-                <h2 class="card-name">Plátano</h2>
-                <p class="card-price">2,80 <span class="card-span">€/kg</span></p>
-
-                <a href="#" class="card-button">Más Info</a>
+              <div class="card-footer">
+                <button>Añadir</button>
               </div>
             </article>
           </div>
@@ -257,7 +231,7 @@
     </section>
       
       <button id="elevator" class="elevator">
-        <i class="fa-solid fa-arrow-up fa-2xl" style="color: #6f7276;"></i>
+        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
       </button>
 
       <footer>
