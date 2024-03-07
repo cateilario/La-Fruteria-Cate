@@ -1,5 +1,4 @@
 <?php
-
 function conectarDB()
 {
     $db = mysqli_connect('localhost', 'root', 'root', 'fruteria', 3307);

@@ -71,6 +71,7 @@
     <h1>Productos</h1>
     <div class="products-grid">
       <article class="card" >
+      <article class="card" >
         <img src="./assets/imgs/product.png" alt="">
         <div class="card-body">
           <h2>Fresas</h2>
@@ -80,6 +81,7 @@
           <button>Añadir</button>
         </div>
       </article>
+      <article class="card">
       <article class="card">
         <img src="./assets/imgs/product2.png" alt="">
         <div class="card-body">
@@ -91,6 +93,7 @@
         </div>
       </article>
       <article class="card">
+      <article class="card">
         <img src="./assets/imgs/product3.png" alt="">
         <div class="card-body">
           <h2>Alcachofas</h2>
@@ -100,6 +103,7 @@
           <button>Añadir</button>
         </div>
       </article>
+      <article class="card">
       <article class="card">
         <img src="./assets/imgs/product4.png" alt="">
         <div class="card-body">
@@ -111,6 +115,7 @@
         </div>
       </article>
       <article class="card">
+      <article class="card">
         <img src="./assets/imgs/product5.png" alt="">
         <div class="card-body">
           <h2>Manzana</h2>
@@ -120,6 +125,7 @@
           <button>Añadir</button>
         </div>
       </article>
+      <article class="card">
       <article class="card">
         <img src="./assets/imgs/product6.png" alt="">
         <div class="card-body">
@@ -131,6 +137,7 @@
         </div>
       </article>
       <article class="card">
+      <article class="card">
         <img src="./assets/imgs/product7.png" alt="">
         <div class="card-body">
           <h2>Melón</h2>
@@ -140,6 +147,7 @@
           <button>Añadir</button>
         </div>
       </article>
+      <article class="card">
       <article class="card">
         <img src="./assets/imgs/product10.png" alt="">
         <div class="card-body">
@@ -151,6 +159,7 @@
         </div>
       </article>
       <article class="card">
+      <article class="card">
         <img src="./assets/imgs/product9.png" alt="">
         <div class="card-body">
           <h2>Naranjas</h2>
@@ -160,6 +169,7 @@
           <button>Añadir</button>
         </div>
       </article>
+      <article class="card">
       <article class="card">
         <img src="./assets/imgs/product8.png" alt="">
         <div class="card-body">
@@ -174,6 +184,7 @@
 
     <!--Slider de artículos más vendidos-->
     <section class="wrap-2">
+    <h1>Productos mas vendidos</h1>
     <h1>Productos mas vendidos</h1>
       <div class="card-container swiper">
         <div class="card-content">
@@ -190,6 +201,8 @@
             </article>
             <article class="card swiper-slide">
               <img src="./assets/imgs/product8.png" alt="">
+            <article class="card swiper-slide">
+              <img src="./assets/imgs/product9.png" alt="">
               <div class="card-body">
                 <h2>Plátanos</h2>
                 <p>2,80 <span>€/kg</span></p>
@@ -198,6 +211,21 @@
                 <button>Añadir</button>
               </div>
             </article>
+            <article class="card swiper-slide">
+              <div class="card-image">
+                <img src="assets/imgs/product5.png" alt="image" class="card-img">
+                <div class="card-shadow"></div>
+              </div>
+              <div class="card-body">
+                <h2>Plátanos</h2>
+                <p>2,80 <span>€/kg</span></p>
+              </div>
+              <div class="card-footer">
+                <button>Añadir</button>
+              </div>
+            </article>
+            <article class="card swiper-slide">
+              <img src="./assets/imgs/product7.png" alt="">
             <article class="card swiper-slide">
               <img src="./assets/imgs/product7.png" alt="">
               <div class="card-body">
