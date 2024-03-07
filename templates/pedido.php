@@ -5,11 +5,17 @@ include '../includes/config/database.php';
 $conn = conectarDB();
 
 // Retrieve user ID from session or wherever it's stored
-$user_id = 1; // Example
+// $user_id = 1; // Example
 
 // Process the submitted order
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Insert order into 'pedidos' table
+    session_start();
+    if (!isset($_SESSION['id'])) {
+        header("Location: login_register.php");
+        exit();
+    }else{
+        $user_id = $_SESSION['id'];
+    }
     $total = 0;
     $order_date = date("Y-m-d");
     $insert_order_query = "INSERT INTO pedidos (usuarios_id, order_date) VALUES ($user_id, '$order_date')";
@@ -45,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: gracias.php");
     exit();
 }
-?>
+
 
 
 

@@ -3,9 +3,21 @@ require "../includes/config/database.php";
 
 $conn = conectarDB();
 
+session_start();
+if (!isset($_SESSION['id'])) {
+    header("Location: login_register.php");
+    exit();
+} else {
+    $user_id = $_SESSION['id'];
+}
 
-// Retrieve user ID from session or wherever it's stored
-$user_id = 1; // Example
+// Cerrrar session
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: ../index.php");
+    exit();
+}
+
 
 // Retrieve the last order made by the user
 $query = "SELECT * FROM pedidos WHERE usuarios_id = $user_id ORDER BY id DESC LIMIT 1";
@@ -29,25 +41,25 @@ $order_details_result = mysqli_query($conn, $order_details_query);
     <title>Thank You</title>
 </head>
 <body>
-    <h2>Thank You for Your Order!</h2>
-    <h3>Order Summary</h3>
-    <p><strong>Order ID:</strong> <?php echo $order['id']; ?></p>
-    <p><strong>Order Date:</strong> <?php echo $order['order_date']; ?></p>
-    <p><strong>Total Amount:</strong> $<?php echo number_format($order['total'], 2); ?></p>
-    <h4>Order Details:</h4>
+    <h2>Gracias por tú pedido!</h2>
+    <h3>Resumen</h3>
+    <p><strong>Fecha Pedido:</strong> <?php echo $order['order_date']; ?></p>
+    <p><strong>Total :</strong> $<?php echo number_format($order['total'], 2); ?></p>
+    <h4>Detalles:</h4>
     <table>
         <tr>
-            <th>Product Name</th>
-            <th>Quantity</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
             <th>Total</th>
         </tr>
         <?php while($row = mysqli_fetch_assoc($order_details_result)) { ?>
             <tr>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['quantity']; ?></td>
-                <td>$<?php echo number_format($row['total'], 2); ?></td>
+                <td><?php echo number_format($row['total'], 2); ?>$</td>
             </tr>
         <?php } ?>
     </table>
+    <a href="?logout=true">Volver a la tienda</a>
 </body>
 </html>
