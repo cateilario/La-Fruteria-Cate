@@ -98,6 +98,9 @@ body.dark-mode {
 body.dark-mode .dark-mode-btn {
   color: #1a1a1a;
 }
+body.dark-mode h1 {
+  color: #ffffff;
+}
 
 .wrap-1 {
   position: relative;

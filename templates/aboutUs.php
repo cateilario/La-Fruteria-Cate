@@ -29,7 +29,7 @@
           <li><a href="./contact.php">Contacto</a></li>
         </ul>
       </nav>
-      <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
+      <a id="dark-mode-toggle" class="dark-mode-btn"><i class="fa-solid fa-moon fa-2xl"></i></a>
       <a class="open-menu" id="open-nav"><i class="fa-solid fa-bars fa-2xl"></i></a>
     </div>
   </header>
@@ -95,6 +95,7 @@
         </div>
       </footer>
 
+  <script src="./scripts/main.js"></script>
   <script>
         const nav = document.getElementById("nav");
         const openBtn = document.getElementById("open-nav");
