@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $query);
                 <tbody>
                     <?php foreach($result as $product): ?>
                         <tr>
-                            <td><img src='../images/<?php echo $product['imagen']; ?>' alt='<?php echo $product['nombre']; ?>'></td>
+                            <td><img width="100" height="100" src='../images/<?php echo $product['imagen']; ?>' alt='<?php echo $product['nombre']; ?>'></td>
                             <td><?php echo $product['nombre']; ?></td>
                             <td><?php echo $product['precio']; ?></td>
                             <td><input type="number" name="quantity[<?php echo $product['id']; ?>]" value="0" min="0"></td>

@@ -32,7 +32,7 @@
           <li><a href="./templates/contact.php">Contacto</a></li>
         </ul>
       </nav>
-      <a id="dark-mode-toggle" class="dark-mode"><i class="fa-solid fa-moon fa-2xl"></i></a>
+      <a id="dark-mode-toggle" class="dark-mode-btn"><i class="fa-solid fa-moon fa-2xl"></i></a>
       <a class="open-menu" id="open-nav"><i class="fa-solid fa-bars fa-2xl"></i></a>
     </div>
   </header>
@@ -224,10 +224,10 @@
             </article>
           </div>
         </div>
-        <div class="swiper-button-prev">
+        <div class="swiper-button-prev" id="backward">
           <img src="assets/imgs/arrow-left-s-line.svg" alt="arrowl">
         </div>
-        <div class="swiper-button-next">
+        <div class="swiper-button-next" id="forward">
           <img src="assets/imgs/arrow-right-s-line.svg" alt="arrowr">
         </div>
         <div class="swiper-pagination"></div>

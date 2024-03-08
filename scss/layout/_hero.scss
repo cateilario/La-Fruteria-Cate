@@ -1,91 +1,91 @@
-@use './../base/variables' as v;
+@use "./../base/variables" as v;
 
 .wrap-1 {
-    position: relative;
+  position: relative;
 }
 
-.hero{
-    clip-path: ellipse(79% 58% at 42% 35%);
-    background: url('/la-fruteria-cate/assets/imgs/hero.jpg') center/cover;
-    height: 100vh;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.hero {
+  clip-path: ellipse(79% 58% at 42% 35%);
+  background: url("../assets/imgs/hero.jpg") center/cover;
+  height: 100vh;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .wrap-1::before {
-    position: absolute;
-    background: v.$dark-grey;
-    opacity: 0.7;
-    content: "";
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  background: v.$dark-grey;
+  opacity: 0.7;
+  content: "";
+  height: 100%;
+  width: 100%;
 }
 
 .hero-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-    width: 80%;
-    text-align: left;
-    padding: 0 5rem;
-    
-    h1 {
-        font-family: Fresh-Fruit;
-        font-size: 3.5rem;
-        color:v.$white;
-    }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  text-align: left;
+  padding: 0 5rem;
 
-    p{
-        color:v.$white;
-    }
+  h1 {
+    font-family: Fresh-Fruit;
+    font-size: 3.5rem;
+    color: v.$white;
+  }
+
+  p {
+    color: v.$white;
+  }
 }
 
-.wrap-2{
-    width: 100%;
-    display: flex;
-    padding-bottom: 3rem;
-    flex-direction: column;
+.wrap-2 {
+  width: 100%;
+  display: flex;
+  padding-bottom: 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  h1 {
+    text-transform: uppercase;
+    color: v.$dark-grey;
+    font-family: Fresh-Fruit;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    width: 80%;
 
-    h1 {
-        text-transform: uppercase;
-        color: v.$dark-grey;
-        font-family: Fresh-Fruit;
+    .container-info {
+      border: 1px solid v.$light-grey;
+      border-radius: 6px;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      p {
+        background-color: v.$dark-green;
+        color: v.$white;
+        border-radius: 100px;
+        padding: 1rem 3rem;
         text-align: center;
-        letter-spacing: .2rem;
+        border: 0;
+        font-weight: 200;
+      }
     }
-
-    .container{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        align-items: center;
-        gap: 1rem;
-        width: 80%;
-
-        .container-info{
-            border: 1px solid v.$light-grey;
-            border-radius: 6px;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-
-            p{
-                background-color: v.$dark-green;
-                color: v.$white;
-                border-radius: 100px;
-                padding: 1rem 3rem;
-                text-align: center;
-                border: 0;
-                font-weight: 200;
-            }
-        }
-    }
+  }
 }

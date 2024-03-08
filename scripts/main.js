@@ -19,8 +19,8 @@ window.onload = () => {
   let backButton = document.getElementById("backward");
   let advanceButton = document.getElementById("forward");
   let imgContainer = document.getElementById("images");
-  let playButton = document.getElementById("play");
-  let stopButton = document.getElementById("stop");
+  // let playButton = document.getElementById("play");
+  // let stopButton = document.getElementById("stop");
   let interval;
 
   // Función para pasar fotos
@@ -71,8 +71,8 @@ window.onload = () => {
   // Eventos
   advanceButton.addEventListener("click", nextImage);
   backButton.addEventListener("click", previousImage);
-  playButton.addEventListener("click", playInterval);
-  stopButton.addEventListener("click", stopInterval);
+  // playButton.addEventListener("click", playInterval);
+  // stopButton.addEventListener("click", stopInterval);
   // Iniciar
   showImage();
 };
